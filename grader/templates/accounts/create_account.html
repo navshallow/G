@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Jersey+25:400" rel="stylesheet" />
+    <!-- Updated paths -->
+    <link rel="stylesheet" href="{% static 'grader/css/globals.css' %}" />
+    <link rel="stylesheet" href="{% static 'grader/css/create_account.css' %}" />
+    <title>Create Account</title>
+  </head>
+  <body>
+    <div class="create-an-account">
+      <div class="div">
+        <div class="text-wrapper">CREATE YOUR ACCOUNT</div>
+        <div class="NAME-input"></div>
+        <div class="EMAIL-input"></div>
+        <div class="CREATE-PASSWORD"></div>
+        <div class="CONFIRM-PASSWORD"></div>
+        <div class="text-wrapper-2">Enter your name</div>
+        <div class="text-wrapper-3">Enter your email</div>
+        <div class="text-wrapper-4">Create your password</div>
+        <div class="text-wrapper-5">Confirm password</div>
+        <button class="SIGN-UP-button">
+          <div class="text-wrapper-6">SIGN UP</div>
+        </button>
+        <p class="p">
+          <a href="{% url 'login' %}" class="sign-in-link">Already have an account? Sign In</a>
+        </p>
+        <img class="divider" src="https://c.animaapp.com/m90tx6oe3qlLGq/img/divider.svg" alt="Divider" />
+      </div>
+    </div>
+  </body>
+</html>

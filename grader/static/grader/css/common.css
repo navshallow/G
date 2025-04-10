@@ -1,0 +1,148 @@
+:root {
+  --sidebar-width: 80px; /* CHANGE THIS ONE VALUE to adjust sidebar width */
+}
+
+.page-content {
+  margin-left: var(--sidebar-width);  
+}
+
+/* Sidebar styles */
+.LEFT-SIDE-BAR {
+  position: fixed;     
+  top: 0;
+  left: 0;
+  bottom: 0;           
+  width: var(--sidebar-width);
+  background-color: #daacf0;
+  z-index: 1000;
+  overflow: hidden; /* Prevent scrolling */
+  /* Add zoom control with CSS variable to match main content */
+  --zoom-level: var(--zoom-level, 1);
+  transform-origin: top left;
+  transform: scale(var(--zoom-level));
+}
+
+.LEFT-SIDE-BAR .divider {
+  position: absolute;
+  width: calc(var(--sidebar-width) * 0.53);
+  height: 1px;
+  top: 60%;
+  left: calc(var(--sidebar-width) * 0.24);
+  object-fit: cover;
+}
+
+.LEFT-SIDE-BAR .img {
+  position: absolute;
+  width: calc(var(--sidebar-width) * 0.53);
+  height: 1px;
+  top: 84px;
+  left: calc(var(--sidebar-width) * 0.23);
+  object-fit: cover;
+}
+
+.LEFT-SIDE-BAR .user {
+  position: absolute;
+  width: calc(var(--sidebar-width) * 0.5);
+  height: calc(var(--sidebar-width) * 0.5);
+  top: 70%;
+  left: calc(var(--sidebar-width) * 0.25);
+}
+
+.LEFT-SIDE-BAR .frame {
+  position: absolute;
+  width: calc(var(--sidebar-width) * 0.5);
+  height: calc(var(--sidebar-width) * 0.5);
+  top: 80%;
+  left: calc(var(--sidebar-width) * 0.25);
+  background-color: #52247f;
+  border-radius: 180px;
+}
+
+.LEFT-SIDE-BAR .add-class {
+  position: absolute;
+  width: calc(var(--sidebar-width) * 0.36);
+  height: calc(var(--sidebar-width) * 0.36);
+  top: 55%;
+  left: calc(var(--sidebar-width) * 0.32);
+}
+
+.LEFT-SIDE-BAR .settings {
+  position: absolute;
+  width: calc(var(--sidebar-width) * 0.5);
+  height: calc(var(--sidebar-width) * 0.5);
+  top: 90%;
+  left: calc(var(--sidebar-width) * 0.25);
+}
+
+.LEFT-SIDE-BAR .ENGR-wrapper {
+  position: absolute;
+  width: calc(var(--sidebar-width) * 0.88);
+  height: calc(var(--sidebar-width) * 0.5);
+  top: 119px;
+  left: calc(var(--sidebar-width) * 0.06);
+  background: linear-gradient(180deg, rgba(37, 10, 49, 1) 0%, rgba(82, 36, 127, 1) 100%);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 2px solid #e6e6e6;
+}
+
+.LEFT-SIDE-BAR .ENGR {
+  position: absolute;
+  height: calc(var(--sidebar-width) * 0.36);
+  top: 5px;
+  left: calc(var(--sidebar-width) * 0.25);
+  font-weight: 400;
+  color: #ffffff;
+  font-size: calc(var(--sidebar-width) * 0.18);
+  text-align: center;
+  line-height: normal;
+}
+
+.LEFT-SIDE-BAR .course-button-5 {
+  position: absolute;
+  width: calc(var(--sidebar-width) * 0.88);
+  height: calc(var(--sidebar-width) * 0.5);
+  top: 184px;
+  left: calc(var(--sidebar-width) * 0.06);
+  background: linear-gradient(180deg, rgba(37, 10, 49, 1) 0%, rgba(113, 32, 151, 1) 100%);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 2px solid #e6e6e6;
+}
+
+.LEFT-SIDE-BAR .course-button-6 {
+  position: absolute;
+  width: calc(var(--sidebar-width) * 0.88);
+  height: calc(var(--sidebar-width) * 0.5);
+  top: 249px;
+  left: calc(var(--sidebar-width) * 0.06);
+  background: linear-gradient(180deg, rgba(37, 10, 49, 1) 0%, rgba(113, 32, 151, 1) 100%);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 2px solid #e6e6e6;
+}
+
+.LEFT-SIDE-BAR .add-class-2 {
+  position: absolute;
+  width: calc(var(--sidebar-width) * 0.5);
+  height: calc(var(--sidebar-width) * 0.5);
+  top: 18px;
+  left: calc(var(--sidebar-width) * 0.25);
+  background-color: #ffffff;
+  border-radius: 180px;
+  overflow: hidden;
+}
+
+.LEFT-SIDE-BAR .text-wrapper-8 {
+  position: absolute;
+  height: calc(var(--sidebar-width) * 0.18);
+  top: calc(var(--sidebar-width) * 0.15);
+  left: calc(var(--sidebar-width) * 0.07);
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: calc(var(--sidebar-width) * 0.18);
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}

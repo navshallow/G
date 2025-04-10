@@ -1,0 +1,56 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+{% block head_extra %}
+  <link rel="stylesheet" href="{% static 'grader/css/assignmentbylist.css' %}" />
+{% endblock %}
+{% block title %}Assignmentbylist - Gator Grader{% endblock %}
+{% block content %}
+<div class="assignment-by-list">
+  <div class="div">
+    <div class="PREVIEW">
+      <div class="text-wrapper">Preview</div>
+      <img class="preview-icon" src="https://c.animaapp.com/m92bfqd0MOyKRh/img/preview-icon.svg" alt="Preview Icon" />
+    </div>
+    <p class="p">ENGR 101 - (CLASS NAME)</p>
+    <div class="text-wrapper-2">Assignment 1 -</div>
+    <div class="text-wrapper-3">Assignment 2 -</div>
+    <div class="text-wrapper-4">Assignment 3 -</div>
+    <div class="text-wrapper-5">Assignment 4 -</div>
+    <div class="text-wrapper-6">Test 1 -</div>
+    <div class="text-wrapper-7">Test 2 -</div>
+    <div class="text-wrapper-8">Summary 1 -</div>
+    <div class="frame-2">
+      <div class="text-wrapper-10">Create</div>
+      <img class="create-file-icon" src="https://c.animaapp.com/m92bfqd0MOyKRh/img/create-file-icon.svg" alt="Create File Icon" />
+    </div>
+    <div class="frame-3">
+      <div class="text-wrapper-11">Upload</div>
+      <img class="upload-icon" src="https://c.animaapp.com/m92bfqd0MOyKRh/img/upload-icon.svg" alt="Upload Icon" />
+    </div>
+    <div class="frame-4">
+      <div class="text-wrapper-12">Edit</div>
+      <img class="edit-icon" src="https://c.animaapp.com/m92bfqd0MOyKRh/img/edit-icon.svg" alt="Edit Icon" />
+    </div>
+    <div class="frame-5">
+      <div class="text-wrapper-13">Delete</div>
+      <img class="delete-icon" src="https://c.animaapp.com/m92bfqd0MOyKRh/img/delete-icon.svg" alt="Delete Icon" />
+    </div>
+    <div class="GRADE-button"><div class="text-wrapper-14">GRADE</div></div>
+    <div class="GRADE-button-2"><div class="text-wrapper-14">GRADE</div></div>
+    <div class="GRADE-button-3"><div class="text-wrapper-14">GRADE</div></div>
+    <div class="GRADE-button-4"><div class="text-wrapper-14">GRADE</div></div>
+    <div class="GRADE-button-5"><div class="text-wrapper-14">GRADE</div></div>
+    <div class="GRADE-button-6"><div class="text-wrapper-14">GRADE</div></div>
+    <div class="GRADE-button-7"><div class="text-wrapper-14">GRADE</div></div>
+    <button class="FILTER-button">
+      <div class="text-wrapper-15">Filter</div>
+      <img class="filter-icon" src="https://c.animaapp.com/m92bfqd0MOyKRh/img/filter-icon.svg" alt="Filter Icon" />
+    </button>
+    <div class="SORT-BY-button">
+      <div class="text-wrapper-16">Sort by</div>
+      <img class="sort-by-icon" src="https://c.animaapp.com/m92bfqd0MOyKRh/img/sort-by-icon.svg" alt="Sort By Icon" />
+    </div>
+    <div class="SORT-BY-button-2"><div class="text-wrapper-17">View roster</div></div>
+  </div>
+</div>
+{% endblock %}

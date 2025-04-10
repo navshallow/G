@@ -1,0 +1,360 @@
+html, body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Added variable for left margin adjustment */
+:root {
+  --content-left-offset: 0px; /* Change this value to shift content left/right */
+}
+
+.home-page {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  /* Add zoom control with CSS variables */
+  --zoom-level: .83;
+  transform-origin: top left;
+  transform: scale(var(--zoom-level));
+  /* Add left margin adjustment */
+  margin-left: var(--content-left-offset);
+}
+
+/* Zoom control buttons can be added and styled */
+.zoom-controls {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  display: flex;
+  gap: 5px;
+}
+
+.zoom-button {
+  width: 30px;
+  height: 30px;
+  background-color: #52247f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.home-page .div {
+  background-color: #ffffff;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+}
+
+/* Modified width and positioning of the stats boxes */
+.home-page .COURSE-OVERALL-STATS {
+  position: absolute;
+  width: 745px; /* Updated width: 705 + 40 */
+  height: 444px; /* Updated height: 434 + 10 */
+  top: 98px;
+  left: 137px;
+  background-color: #fafaf5;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 2px solid #e6e6e6;
+}
+
+.home-page .text-wrapper {
+  position: absolute;
+  height: 18px;
+  top: 14px;
+  left: 272px; /* Adjusted center position for wider box */
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+/* Adjusted course button positions for wider box */
+.home-page .course-button {
+  position: absolute;
+  width: 88px;
+  height: 21px;
+  top: 408px; /* Adjusted for taller box */
+  left: 55px; /* Adjusted position */
+  border-radius: 24px;
+  overflow: hidden;
+  border: 2px solid #e6e6e6;
+  background: linear-gradient(
+    180deg,
+    rgba(37,10,49,1) 0%,
+    rgba(113,32,151,1) 100%
+  );
+}
+
+.home-page .text-wrapper-2 {
+  left: 13px;
+  position: absolute;
+  height: 16px;
+  top: 1px;
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.home-page .div-wrapper {
+  height: 21px;
+  top: 408px; /* Adjusted for taller box */
+  left: 345px; /* Adjusted position */
+  background: linear-gradient(
+    180deg,
+    rgba(37,10,49,1) 0%,
+    rgba(113,32,151,1) 100%
+  );
+  position: absolute;
+  width: 88px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 2px solid #e6e6e6;
+}
+
+.home-page .text-wrapper-3 {
+  left: 11px;
+  position: absolute;
+  height: 16px;
+  top: 1px;
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.home-page .course-button-2 {
+  height: 21px;
+  top: 408px; /* Adjusted for taller box */
+  left: 200px; /* Adjusted position */
+  background: linear-gradient(
+    180deg,
+    rgba(37,10,49,1) 0%,
+    rgba(113,32,151,1) 100%
+  );
+  position: absolute;
+  width: 88px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 2px solid #e6e6e6;
+}
+
+.home-page .course-button-3 {
+  height: 21px;
+  top: 408px; /* Adjusted for taller box */
+  left: 490px; /* Adjusted position */
+  background: linear-gradient(
+    180deg,
+    rgba(37,10,49,1) 0%,
+    rgba(113,32,151,1) 100%
+  );
+  position: absolute;
+  width: 88px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 2px solid #e6e6e6;
+}
+
+.home-page .text-wrapper-4 {
+  left: 12px;
+  position: absolute;
+  height: 16px;
+  top: 1px;
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.home-page .course-button-4 {
+  height: 21px;
+  top: 408px; /* Adjusted for taller box */
+  left: 635px; /* Adjusted position */
+  background: linear-gradient(
+    180deg,
+    rgba(37,10,49,1) 0%,
+    rgba(113,32,151,1) 100%
+  );
+  position: absolute;
+  width: 88px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 2px solid #e6e6e6;
+}
+
+.home-page .CALENDAR {
+  position: absolute;
+  width: 745px; /* Updated width: 705 + 40 */
+  height: 444px; /* Updated height: 434 + 10 */
+  top: 563px;
+  left: 137px;
+  background-color: #fafaf5;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 2px solid #e6e6e6;
+}
+
+.home-page .text-wrapper-5 {
+  position: absolute;
+  height: 18px;
+  top: 14px;
+  left: 338px; /* Adjusted center position */
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.home-page .TO-DO {
+  position: absolute;
+  width: 745px; /* Updated width: 705 + 40 */
+  height: 444px; /* Updated height: 434 + 10 */
+  top: 563px;
+  left: 905px; /* Adjusted position to reduce gap */
+  background-color: #fafaf5;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 2px solid #e6e6e6;
+}
+
+.home-page .text-wrapper-6 {
+  position: absolute;
+  height: 18px;
+  top: 14px;
+  left: 336px; /* Adjusted center position */
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.home-page .ASIGNMENT-STATS {
+  position: absolute;
+  width: 745px; /* Updated width: 705 + 40 */
+  height: 444px; /* Updated height: 434 + 10 */
+  top: 98px;
+  left: 905px; /* Adjusted position to reduce gap */
+  background-color: #fafaf5;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 2px solid #e6e6e6;
+}
+
+.home-page .text-wrapper-7 {
+  position: absolute;
+  height: 18px;
+  top: 14px;
+  left: 298px; /* Adjusted center position */
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.home-page .text-wrapper-9 {
+  position: absolute;
+  height: 30px;
+  top: 27px;
+  left: 137px;
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.home-page .SIGN-UP-button {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  width: 120px;
+  height: 45px;
+  top: 21px;
+  left: 1530px; /* Adjusted position */
+  background-color: #52247f;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.home-page .text-wrapper-10 {
+  position: absolute;
+  height: 23px;
+  top: 10px;
+  left: 33px;
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 23.4px;
+  white-space: nowrap;
+}
+
+.home-page .LOG-IN-button {
+  position: absolute;
+  width: 120px;
+  height: 45px;
+  top: 21px;
+  left: 1380px; /* Adjusted position */
+  background-color: #52247f;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.home-page .text-wrapper-11 {
+  position: absolute;
+  height: 23px;
+  top: 10px;
+  left: 38px;
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 23.4px;
+  white-space: nowrap;
+}

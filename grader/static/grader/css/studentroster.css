@@ -1,0 +1,642 @@
+.student-roster .LEFT-SIDE-BAR {
+    display: none;
+  }
+  
+  .student-roster {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .student-roster .div {
+    background-color: #ffffff;
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+  }
+  
+  .student-roster .STUDENT-ROSTER {
+    position: absolute;
+    width: 1262px;
+    height: 897px;
+    top: 97px;
+    left: 137px;
+    background-color: #d9d9d9;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #e6e6e6;
+  }
+  
+  .student-roster .SEARCH-bar {
+    position: absolute;
+    width: 605px;
+    height: 50px;
+    top: 38px;
+    left: 26px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #e6e6e6;
+  }
+  
+  .student-roster .text-wrapper {
+    position: absolute;
+    width: 305px;
+    height: 18px;
+    top: 14px;
+    left: 26px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .student-roster .search-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 16px;
+    left: 565px;
+  }
+  
+  .student-roster .ID-BAR {
+    position: absolute;
+    width: 1000px;
+    height: 40px;
+    top: 142px;
+    left: 106px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #e6e6e6;
+  }
+  
+  .student-roster .text-wrapper-2 {
+    position: absolute;
+    width: 78px;
+    height: 17px;
+    top: 10px;
+    left: 148px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .student-roster .text-wrapper-3 {
+    position: absolute;
+    width: 81px;
+    height: 17px;
+    top: 10px;
+    left: 477px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .student-roster .text-wrapper-4 {
+    position: absolute;
+    width: 42px;
+    height: 17px;
+    top: 10px;
+    left: 810px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .student-roster .ID-BAR-2 {
+    top: 237px;
+    position: absolute;
+    width: 1000px;
+    height: 40px;
+    left: 106px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #e6e6e6;
+  }
+  
+  .student-roster .ID-BAR-3 {
+    top: 332px;
+    position: absolute;
+    width: 1000px;
+    height: 40px;
+    left: 106px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #e6e6e6;
+  }
+  
+  .student-roster .ID-BAR-4 {
+    top: 427px;
+    position: absolute;
+    width: 1000px;
+    height: 40px;
+    left: 106px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #e6e6e6;
+  }
+  
+  .student-roster .ID-BAR-5 {
+    top: 522px;
+    position: absolute;
+    width: 1000px;
+    height: 40px;
+    left: 106px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #e6e6e6;
+  }
+  
+  .student-roster .ID-BAR-6 {
+    top: 617px;
+    position: absolute;
+    width: 1000px;
+    height: 40px;
+    left: 106px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #e6e6e6;
+  }
+  
+  .student-roster .ID-BAR-7 {
+    top: 712px;
+    position: absolute;
+    width: 1000px;
+    height: 40px;
+    left: 106px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #e6e6e6;
+  }
+  
+  .student-roster .ID-BAR-8 {
+    top: 807px;
+    position: absolute;
+    width: 1000px;
+    height: 40px;
+    left: 106px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #e6e6e6;
+  }
+  
+  .student-roster .frame {
+    top: 137px;
+    left: 26px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #edd520;
+    border-radius: 180px;
+  }
+  
+  .student-roster .frame-2 {
+    top: 232px;
+    left: 25px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #edd520;
+    border-radius: 180px;
+  }
+  
+  .student-roster .frame-3 {
+    top: 422px;
+    left: 25px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #edd520;
+    border-radius: 180px;
+  }
+  
+  .student-roster .frame-4 {
+    top: 612px;
+    left: 25px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #edd520;
+    border-radius: 180px;
+  }
+  
+  .student-roster .frame-5 {
+    top: 327px;
+    left: 25px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #edd520;
+    border-radius: 180px;
+  }
+  
+  .student-roster .frame-6 {
+    top: 517px;
+    left: 25px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #edd520;
+    border-radius: 180px;
+  }
+  
+  .student-roster .frame-7 {
+    top: 707px;
+    left: 25px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #edd520;
+    border-radius: 180px;
+  }
+  
+  .student-roster .frame-8 {
+    top: 802px;
+    left: 25px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #edd520;
+    border-radius: 180px;
+  }
+  
+  .student-roster .VIEW-button {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    top: 142px;
+    left: 1136px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .student-roster .text-wrapper-5 {
+    position: absolute;
+    height: 23px;
+    top: 7px;
+    left: 33px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    white-space: nowrap;
+  }
+  
+  .student-roster .div-wrapper {
+    top: 237px;
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 1136px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .student-roster .VIEW-button-2 {
+    top: 332px;
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 1136px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .student-roster .VIEW-button-3 {
+    top: 427px;
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 1136px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .student-roster .VIEW-button-4 {
+    top: 522px;
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 1136px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .student-roster .VIEW-button-5 {
+    top: 617px;
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 1136px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .student-roster .VIEW-button-6 {
+    top: 712px;
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 1136px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .student-roster .VIEW-button-7 {
+    top: 807px;
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 1136px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .student-roster .UPLOAD-button {
+    all: unset;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    top: 45px;
+    left: 746px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .student-roster .text-wrapper-6 {
+    position: absolute;
+    height: 23px;
+    top: 5px;
+    left: 38px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    white-space: nowrap;
+  }
+  
+  .student-roster .upload-icon {
+    position: absolute;
+    width: 19px;
+    height: 23px;
+    top: 6px;
+    left: 9px;
+  }
+  
+  .student-roster .ADD-button {
+    all: unset;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    top: 45px;
+    left: 876px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .student-roster .text-wrapper-7 {
+    position: absolute;
+    height: 18px;
+    top: 8px;
+    left: 51px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .student-roster .add-icon {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 7px;
+    left: 20px;
+  }
+  
+  .student-roster .EDIT-button {
+    all: unset;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    top: 45px;
+    left: 1006px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .student-roster .text-wrapper-8 {
+    position: absolute;
+    height: 18px;
+    top: 8px;
+    left: 52px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .student-roster .edit-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 6px;
+    left: 18px;
+  }
+  
+  .student-roster .DELETE-button {
+    all: unset;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    top: 45px;
+    left: 1136px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .student-roster .text-wrapper-9 {
+    position: absolute;
+    height: 18px;
+    top: 8px;
+    left: 39px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .student-roster .delete-icon {
+    position: absolute;
+    width: 19px;
+    height: 21px;
+    top: 7px;
+    left: 10px;
+  }
+  
+  .student-roster .p {
+    position: absolute;
+    width: 396px;
+    height: 30px;
+    top: 29px;
+    left: 137px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .student-roster .rectangle {
+    position: absolute;
+    width: 1263px;
+    height: 897px;
+    top: -1085px;
+    left: 124px;
+    background-color: #edd520;
+  }
+  
+  .student-roster .SIGN-button {
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    top: 25px;
+    left: 1279px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .student-roster .text-wrapper-10 {
+    position: absolute;
+    height: 23px;
+    top: 7px;
+    left: 47px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    white-space: nowrap;
+  }
+  
+  .student-roster .return-icon {
+    position: absolute;
+    width: 14px;
+    height: 11px;
+    top: 15px;
+    left: 16px;
+  }
+  
+  .student-roster .LEFT-SIDE-BAR {
+    position: absolute;
+    width: 100px;
+    height: 1024px;
+    top: 0;
+    left: 0;
+    background-color: #daacf0;
+  }
+  
+  .student-roster .divider {
+    position: absolute;
+    width: 53px;
+    height: 1px;
+    top: 600px;
+    left: 24px;
+    object-fit: cover;
+  }
+  
+  .student-roster .img {
+    position: absolute;
+    width: 53px;
+    height: 1px;
+    top: 84px;
+    left: 23px;
+    object-fit: cover;
+  }
+  
+  .student-roster .user {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 700px;
+    left: 25px;
+  }
+  
+  .student-roster .frame-9 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 795px;
+    left: 25px;
+    background-color: #52247f;
+    border-radius: 180px;
+  }
+  

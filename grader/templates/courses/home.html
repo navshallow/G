@@ -1,0 +1,64 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+
+{% block head_extra %}
+  <link rel="stylesheet" href="{% static 'grader/css/home.css' %}" />
+{% endblock %}
+
+{% block title %}
+  Home - Gator Grader
+{% endblock %}
+
+{% block content %}
+<div class="home-page">
+  <div class="div">
+
+    <div class="COURSE-OVERALL-STATS">
+      <div class="text-wrapper">COURSE OVERALL STATISTICS</div>
+
+      <div class="course-button">
+        <div class="text-wrapper-2">CLASS 101</div>
+      </div>
+
+      <div class="div-wrapper">
+        <div class="text-wrapper-3">CLASS 103</div>
+      </div>
+
+      <div class="course-button-2">
+        <div class="text-wrapper-3">CLASS 102</div>
+      </div>
+
+      <div class="course-button-3">
+        <div class="text-wrapper-4">CLASS 104</div>
+      </div>
+
+      <div class="course-button-4">
+        <div class="text-wrapper-3">CLASS 105</div>
+      </div>
+    </div>
+
+    <div class="CALENDAR">
+      <div class="text-wrapper-5">CALENDAR</div>
+    </div>
+
+    <div class="TO-DO">
+      <div class="text-wrapper-6">TO DO LIST</div>
+    </div>
+
+    <div class="ASIGNMENT-STATS">
+      <div class="text-wrapper-7">ASSIGNMENT STATISTICS</div>
+    </div>
+
+    <div class="text-wrapper-9">WELCOME TO GATOR GRADER!</div>
+
+    <button class="SIGN-UP-button">
+      <div class="text-wrapper-10">SIGN UP</div>
+    </button>
+
+    <div class="LOG-IN-button">
+      <div class="text-wrapper-11">LOG IN</div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

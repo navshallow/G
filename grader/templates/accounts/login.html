@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8" />
+   <link href="https://fonts.googleapis.com/css?family=Jersey+25:400" rel="stylesheet" />
+   <!-- Updated paths -->
+   <link rel="stylesheet" href="{% static 'grader/css/globals.css' %}" />
+   <link rel="stylesheet" href="{% static 'grader/css/login.css' %}" />
+  </head>
+ <body>
+   <div class="box">
+     <div class="log-in-page">
+       <div class="property-default">
+         <div class="DSO-LOG-IN-button">
+           <div class="text-wrapper">DSO</div>
+           <img class="DSO-icon" src="https://c.animaapp.com/m8z8b6so53fNBV/img/dso-icon.svg" alt="DSO Icon"/>
+         </div>
+         <div class="MICROSOFT-LOG-IN">
+           <div class="div">MICROSOFT</div>
+         </div>
+         <div class="LOG-IN-button">
+           <div class="text-wrapper-2">LOG IN</div>
+         </div>
+         <div class="GOOGLE-LOG-IN-button">
+           <div class="text-wrapper-3">GOOGLE</div>
+         </div>
+         <div class="APPLE-LOG-IN-button">
+           <div class="text-wrapper-4">APPLE</div>
+         </div>
+         <p class="p">LOG IN WITH YOUR CREDENTIALS</p>
+         <div class="text-wrapper-5">Remember me</div>
+         <div class="text-wrapper-6">Forgot your password?</div>
+         <div class="text-wrapper-7">OR LOG IN WITH</div>
+         <a href="{% url 'create_account' %}" class="text-wrapper-8 purple-link">New User? Create an account</a>
+         <div class="overlap">
+           <div class="div-wrapper">
+             <div class="text-wrapper-9">Username or email</div>
+           </div>
+           <div class="div-wrapper">
+             <div class="text-wrapper-9">Username or email</div>
+           </div>
+         </div>
+         <div class="overlap-group">
+           <div class="div-wrapper">
+             <div class="text-wrapper-9">Password</div>
+           </div>
+           <div class="div-wrapper">
+             <div class="text-wrapper-9">Password</div>
+           </div>
+         </div>
+         <img class="divider" src="https://c.animaapp.com/m8z8b6so53fNBV/img/divider-1.svg" alt="Divider"/>
+         <img class="img" src="https://c.animaapp.com/m8z8b6so53fNBV/img/divider.svg" alt="Divider"/>
+         <img class="divider-2" src="https://c.animaapp.com/m8z8b6so53fNBV/img/divider-1.svg" alt="Divider"/>
+         <div class="remember-me-check"></div>
+         <img class="username-log-in-icon" src="https://c.animaapp.com/m8z8b6so53fNBV/img/username-log-in-icon.svg" alt="Username Icon"/>
+         <img class="password-icon" src="https://c.animaapp.com/m8z8b6so53fNBV/img/password-icon.svg" alt="Password Icon"/>
+       </div>
+     </div>
+   </div>
+ </body>
+</html>

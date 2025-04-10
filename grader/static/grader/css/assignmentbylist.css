@@ -1,0 +1,632 @@
+.assignment-by-list {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+  
+.assignment-by-list .div {
+    background-color: #ffffff;
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+}
+  
+.assignment-by-list .PREVIEW {
+    position: absolute;
+    width: 680px;
+    height: 1024px;
+    top: 0;
+    left: 760px;
+    background-color: #e6e6e6;
+    border-radius: 25px;
+    overflow: hidden;
+}
+  
+.assignment-by-list .text-wrapper {
+    top: 515px;
+    left: 321px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    position: absolute;
+    height: 30px;
+}
+  
+.assignment-by-list .preview-icon {
+    width: 30px;
+    top: 516px;
+    left: 271px;
+    position: absolute;
+    height: 30px;
+}
+  
+.assignment-by-list .p {
+    position: absolute;
+    height: 24px;
+    top: 30px;
+    left: 125px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.assignment-by-list .text-wrapper-2 {
+    top: 238px;
+    left: 126px;
+    position: absolute;
+    height: 18px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.assignment-by-list .text-wrapper-3 {
+    top: 281px;
+    left: 125px;
+    position: absolute;
+    height: 18px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.assignment-by-list .text-wrapper-4 {
+    top: 324px;
+    left: 125px;
+    position: absolute;
+    height: 18px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.assignment-by-list .text-wrapper-5 {
+    top: 367px;
+    left: 125px;
+    position: absolute;
+    height: 18px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.assignment-by-list .text-wrapper-6 {
+    top: 410px;
+    left: 126px;
+    position: absolute;
+    height: 18px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.assignment-by-list .text-wrapper-7 {
+    top: 453px;
+    left: 126px;
+    position: absolute;
+    height: 18px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.assignment-by-list .text-wrapper-8 {
+    position: absolute;
+    height: 18px;
+    top: 496px;
+    left: 125px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+/* Sidebar elements (if needed on this page) */
+.assignment-by-list .LEFT-SIDE-BAR {
+    position: absolute;
+    width: 100px;
+    height: 1024px;
+    top: 0;
+    left: 0;
+    background-color: #daacf0;
+}
+  
+.assignment-by-list .divider {
+    position: absolute;
+    width: 53px;
+    height: 1px;
+    top: 600px;
+    left: 24px;
+    object-fit: cover;
+}
+  
+.assignment-by-list .img {
+    position: absolute;
+    width: 53px;
+    height: 1px;
+    top: 84px;
+    left: 23px;
+    object-fit: cover;
+}
+  
+.assignment-by-list .user {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 700px;
+    left: 25px;
+}
+  
+.assignment-by-list .frame {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 795px;
+    left: 25px;
+    background-color: #52247f;
+    border-radius: 180px;
+}
+  
+.assignment-by-list .add-class {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 540px;
+    left: 32px;
+}
+  
+.assignment-by-list .settings {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 890px;
+    left: 25px;
+}
+  
+.assignment-by-list .course-button {
+    position: absolute;
+    width: 88px;
+    height: 50px;
+    top: 119px;
+    left: 6px;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #e6e6e6;
+    background: linear-gradient(180deg, rgba(37,10,49,1) 0%, rgba(82,36,127,1) 100%);
+}
+  
+.assignment-by-list .ENGR {
+    position: absolute;
+    height: 36px;
+    top: 5px;
+    left: 25px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+  
+.assignment-by-list .ENGR-wrapper {
+    position: absolute;
+    top: 184px;
+    left: 6px;
+    width: 88px;
+    height: 50px;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #e6e6e6;
+    background: linear-gradient(180deg, rgba(37,10,49,1) 0%, rgba(113,32,151,1) 100%);
+}
+  
+.assignment-by-list .div-wrapper {
+    position: absolute;
+    top: 249px;
+    left: 6px;
+    width: 88px;
+    height: 50px;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #e6e6e6;
+    background: linear-gradient(180deg, rgba(37,10,49,1) 0%, rgba(113,32,151,1) 100%);
+}
+  
+.assignment-by-list .logo-button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 18px;
+    left: 25px;
+    background-color: #ffffff;
+    border-radius: 180px;
+    overflow: hidden;
+}
+  
+.assignment-by-list .text-wrapper-9 {
+    position: absolute;
+    height: 18px;
+    top: 15px;
+    left: 7px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.assignment-by-list .frame-2 {
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    top: 95px;
+    left: 125px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+  
+.assignment-by-list .text-wrapper-10 {
+    position: absolute;
+    height: 18px;
+    top: 9px;
+    left: 46px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.assignment-by-list .create-file-icon {
+    position: absolute;
+    width: 26px;
+    height: 21px;
+    top: 8px;
+    left: 8px;
+}
+  
+.assignment-by-list .frame-3 {
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    top: 95px;
+    left: 275px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+  
+.assignment-by-list .text-wrapper-11 {
+    position: absolute;
+    height: 18px;
+    top: 8px;
+    left: 41px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.assignment-by-list .upload-icon {
+    position: absolute;
+    width: 19px;
+    height: 23px;
+    top: 6px;
+    left: 12px;
+}
+  
+.assignment-by-list .frame-4 {
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    top: 95px;
+    left: 425px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+  
+.assignment-by-list .text-wrapper-12 {
+    position: absolute;
+    height: 18px;
+    top: 9px;
+    left: 54px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.assignment-by-list .edit-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 6px;
+    left: 19px;
+}
+  
+.assignment-by-list .frame-5 {
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    top: 95px;
+    left: 575px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+  
+.assignment-by-list .text-wrapper-13 {
+    position: absolute;
+    height: 18px;
+    top: 8px;
+    left: 44px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.assignment-by-list .delete-icon {
+    position: absolute;
+    width: 19px;
+    height: 21px;
+    top: 7px;
+    left: 15px;
+}
+  
+.assignment-by-list .GRADE-button {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    top: 233px;
+    left: 575px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+  
+.assignment-by-list .text-wrapper-14 {
+    position: absolute;
+    height: 18px;
+    top: 5px;
+    left: 27px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.assignment-by-list .GRADE-button-2 {
+    top: 276px;
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    left: 575px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+  
+.assignment-by-list .GRADE-button-3 {
+    top: 319px;
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    left: 575px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+  
+.assignment-by-list .GRADE-button-4 {
+    top: 362px;
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    left: 575px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+  
+.assignment-by-list .GRADE-button-5 {
+    top: 405px;
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    left: 575px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+  
+.assignment-by-list .GRADE-button-6 {
+    top: 448px;
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    left: 575px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+  
+.assignment-by-list .GRADE-button-7 {
+    top: 491px;
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    left: 575px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+  
+.assignment-by-list .FILTER-button {
+    all: unset;
+    box-sizing: border-box;
+    position: absolute;
+    width: 70px;
+    height: 25px;
+    top: 160px;
+    left: 125px;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    overflow: hidden;
+}
+  
+.assignment-by-list .text-wrapper-15 {
+    position: absolute;
+    height: 16px;
+    top: 4px;
+    left: 32px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.assignment-by-list .filter-icon {
+    position: absolute;
+    width: 15px;
+    height: 10px;
+    top: 8px;
+    left: 5px;
+}
+  
+.assignment-by-list .SORT-BY-button {
+    position: absolute;
+    width: 90px;
+    height: 25px;
+    top: 160px;
+    left: 220px;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    overflow: hidden;
+}
+  
+.assignment-by-list .text-wrapper-16 {
+    position: absolute;
+    height: 16px;
+    top: 4px;
+    left: 34px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.assignment-by-list .sort-by-icon {
+    position: absolute;
+    width: 19px;
+    height: 10px;
+    top: 8px;
+    left: 10px;
+}
+  
+.assignment-by-list .SORT-BY-button-2 {
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    top: 160px;
+    left: 335px;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    overflow: hidden;
+}
+  
+.assignment-by-list .text-wrapper-17 {
+    position: absolute;
+    height: 16px;
+    top: 4px;
+    left: 14px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
