@@ -1,24 +1,35 @@
 <div class="LEFT-SIDE-BAR">
-  <img class="divider" src="https://c.animaapp.com/m91w337xrYzkuo/img/divider.svg" alt="Divider" />
+  <a href="{% url 'home' %}" class="add-class-2">
+    <div class="text-wrapper-8">LOGO</div>
+  </a>
+  
   <img class="img" src="https://c.animaapp.com/m91w337xrYzkuo/img/divider.svg" alt="Divider" />
+  
+  <!-- Course pills container with scroll -->
+  <div class="course-pills-container">
+    {% for course in courses %}
+    <a href="#" class="course-pill">
+      <div class="ENGR">{{ course.abbreviation }}<br />{{ course.course_number }}{% if course.section_number %} [{{ course.section_number }}]{% endif %}</div>
+    </a>
+    {% empty %}
+    <!-- Show placeholder if no courses exist -->
+    <div class="course-pill empty-course">
+      <div class="ENGR">No<br />Courses</div>
+    </div>
+    {% endfor %}
+  </div>
+  
+  <!-- Add button with proper positioning -->
+  <a href="{% url 'add_course' %}" class="add-class-link">
+    <img class="add-class" src="https://c.animaapp.com/m91w337xrYzkuo/img/add-class.svg" alt="Add Class" />
+    <span class="tooltip-text">Add Course</span>
+  </a>
+  
+  <!-- Single divider below plus sign -->
+  <img class="divider" src="https://c.animaapp.com/m91w337xrYzkuo/img/divider.svg" alt="Divider" />
+  
+  <!-- User controls with original spacing -->
   <img class="user" src="https://c.animaapp.com/m91w337xrYzkuo/img/user.svg" alt="User" />
   <div class="frame"></div>
-  <img class="add-class" src="https://c.animaapp.com/m91w337xrYzkuo/img/add-class.svg" alt="Add Class" />
   <img class="settings" src="https://c.animaapp.com/m91w337xrYzkuo/img/settings.svg" alt="Settings" />
-  <div class="ENGR-wrapper">
-    <div class="ENGR">ENGR<br />101</div>
-  </div>
-  <div class="course-button-5">
-    <div class="ENGR">ENGR<br />102</div>
-  </div>
-  <div class="course-button-6">
-    <div class="ENGR">ENGR<br />103</div>
-  </div>
-  <div class="add-class-2">
-    <div class="text-wrapper-8">LOGO</div>
-  </div>
- </div>
- 
- 
- 
- 
+</div>
