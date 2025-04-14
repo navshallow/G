@@ -45,7 +45,7 @@
   position: absolute;
   width: calc(var(--sidebar-width) * 0.5);
   height: calc(var(--sidebar-width) * 0.5);
-  top: 70%;
+  top: 65%; /* Changed from 70% to 65% */
   left: calc(var(--sidebar-width) * 0.25);
  }
  
@@ -54,7 +54,7 @@
   position: absolute;
   width: calc(var(--sidebar-width) * 0.5);
   height: calc(var(--sidebar-width) * 0.5);
-  top: 80%;
+  top: 85%; /* Changed from 80% to 85% */
   left: calc(var(--sidebar-width) * 0.25);
   background-color: #52247f;
   border-radius: 180px;
@@ -65,7 +65,7 @@
   position: absolute;
   width: calc(var(--sidebar-width) * 0.5);
   height: calc(var(--sidebar-width) * 0.5);
-  top: 90%;
+  top: 85%; /* Changed from 90% to 85% */
   left: calc(var(--sidebar-width) * 0.25);
  }
  
@@ -236,5 +236,149 @@
   text-align: center;
   line-height: 1.2;
  }
- 
- 
+
+/* Archive icon in sidebar */
+.LEFT-SIDE-BAR .archive-button-link {
+  position: absolute;
+  width: calc(var(--sidebar-width) * 0.5);
+  height: calc(var(--sidebar-width) * 0.5);
+  top: 75%;
+  left: calc(var(--sidebar-width) * 0.25);
+}
+
+.LEFT-SIDE-BAR .archive-icon {
+  position: absolute;
+  width: calc(var(--sidebar-width) * 0.36);
+  height: calc(var(--sidebar-width) * 0.36);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), filter 0.3s ease;
+  color: #ffffff;
+}
+
+.LEFT-SIDE-BAR .archive-button-link:hover .archive-icon {
+  transform: translate(-50%, -50%) scale(1.15);
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
+}
+
+.LEFT-SIDE-BAR .archive-button-link .tooltip-text {
+  visibility: hidden;
+  background-color: rgba(37, 10, 49, 0.9);
+  color: #ffffff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 6px;
+  position: fixed;
+  z-index: 9999;
+  left: var(--sidebar-width);
+  top: 75%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-family: "Jersey 25", Helvetica;
+  font-size: 12px;
+  white-space: nowrap;
+  margin-left: 8px;
+  pointer-events: none;
+}
+
+.LEFT-SIDE-BAR .archive-button-link:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Archive Courses Modal */
+.archived-courses-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.archived-courses-modal.modal-visible {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.archived-courses-modal .modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 500px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.archived-courses-modal .archive-course-item {
+  padding: 12px;
+  margin-bottom: 8px;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.archived-courses-modal .archive-course-item:hover {
+  background-color: #f0f0f0;
+}
+
+.archived-courses-modal .archive-course-item.selected {
+  background-color: #daacf0;
+}
+
+.archived-courses-modal .archive-course-name {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.archived-courses-modal .archive-course-info {
+  font-size: 12px;
+  color: #666;
+}
+
+.archived-courses-modal .no-archive-items {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-style: italic;
+}
+
+.archived-courses-modal.modal-visible {
+    display: flex !important;
+    z-index: 9999;
+    background-color: rgba(0,0,0,0.6);
+}
+
+/* Archive icon in sidebar with circular background */
+.LEFT-SIDE-BAR .archive-button-link {
+  position: absolute;
+  width: calc(var(--sidebar-width) * 0.5);
+  height: calc(var(--sidebar-width) * 0.5);
+  top: 75%;
+  left: calc(var(--sidebar-width) * 0.25);
+  background-color: #52247f; /* Purple background */
+  border-radius: 50%; /* Circular shape */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.LEFT-SIDE-BAR .archive-button-link:hover {
+  transform: scale(1.1);
+  background-color: #622d99; /* Lighter purple on hover */
+}
+
+.LEFT-SIDE-BAR .archive-icon {
+  width: calc(var(--sidebar-width) * 0.28);
+  height: calc(var(--sidebar-width) * 0.28);
+  color: #ffffff;
+}

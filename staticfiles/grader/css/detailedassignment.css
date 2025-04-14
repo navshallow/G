@@ -1,0 +1,709 @@
+.detailed-assigment {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+  
+.detailed-assigment .div {
+    background-color: #ffffff;
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+}
+  
+.detailed-assigment .text-wrapper {
+    position: absolute;
+    width: 254px;
+    height: 30px;
+    top: 31px;
+    left: 128px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+  
+.detailed-assigment .overlap {
+    top: 648px;
+    left: 128px;
+    position: absolute;
+    width: 1271px;
+    height: 80px;
+}
+  
+.detailed-assigment .text-wrapper-2 {
+    position: absolute;
+    width: 254px;
+    height: 30px;
+    top: 32px;
+    left: 0;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+  
+.detailed-assigment .overlap-group {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 1271px;
+    height: 80px;
+}
+  
+.detailed-assigment .text-wrapper-3 {
+    width: 254px;
+    height: 30px;
+    top: 32px;
+    left: 254px;
+    font-size: 30px;
+    position: absolute;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+  
+.detailed-assigment .text-wrapper-4 {
+    width: 254px;
+    height: 30px;
+    top: 32px;
+    left: 509px;
+    font-size: 30px;
+    position: absolute;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+  
+.detailed-assigment .text-wrapper-5 {
+    width: 254px;
+    height: 30px;
+    top: 32px;
+    left: 763px;
+    font-size: 30px;
+    position: absolute;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+  
+.detailed-assigment .text-wrapper-6 {
+    width: 254px;
+    height: 30px;
+    top: 32px;
+    left: 1016px;
+    font-size: 30px;
+    position: absolute;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+  
+.detailed-assigment .horizontal-divider {
+    position: absolute;
+    width: 1271px;
+    height: 1px;
+    top: 79px;
+    left: 0;
+    object-fit: cover;
+}
+  
+.detailed-assigment .vertical-divider {
+    position: absolute;
+    width: 1px;
+    height: 80px;
+    top: 0;
+    left: 254px;
+    object-fit: cover;
+}
+  
+.detailed-assigment .img {
+    left: 508px;
+    position: absolute;
+    width: 1px;
+    height: 80px;
+    top: 0;
+    object-fit: cover;
+}
+  
+.detailed-assigment .vertical-divider-2 {
+    left: 762px;
+    position: absolute;
+    width: 1px;
+    height: 80px;
+    top: 0;
+    object-fit: cover;
+}
+  
+.detailed-assigment .vertical-divider-3 {
+    left: 1016px;
+    position: absolute;
+    width: 1px;
+    height: 80px;
+    top: 0;
+    object-fit: cover;
+}
+  
+.detailed-assigment .text-wrapper-7 {
+    position: absolute;
+    height: 18px;
+    top: 4px;
+    left: 25px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.detailed-assigment .text-wrapper-8 {
+    position: absolute;
+    height: 18px;
+    top: 4px;
+    left: 279px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.detailed-assigment .text-wrapper-9 {
+    position: absolute;
+    height: 18px;
+    top: 4px;
+    left: 533px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.detailed-assigment .text-wrapper-10 {
+    position: absolute;
+    height: 18px;
+    top: 4px;
+    left: 787px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.detailed-assigment .text-wrapper-11 {
+    position: absolute;
+    height: 18px;
+    top: 4px;
+    left: 1041px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+/* Hide LEFT-SIDE-BAR since it is provided by base.html */
+.detailed-assigment .LEFT-SIDE-BAR {
+    display: none;
+}
+  
+.detailed-assigment .divider {
+    position: absolute;
+    width: 53px;
+    height: 1px;
+    top: 600px;
+    left: 24px;
+    object-fit: cover;
+}
+  
+.detailed-assigment .divider-2 {
+    position: absolute;
+    width: 53px;
+    height: 1px;
+    top: 84px;
+    left: 23px;
+    object-fit: cover;
+}
+  
+.detailed-assigment .user {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 700px;
+    left: 25px;
+}
+  
+.detailed-assigment .frame {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 795px;
+    left: 25px;
+    background-color: #52247f;
+    border-radius: 180px;
+}
+  
+.detailed-assigment .add-class {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 540px;
+    left: 32px;
+}
+  
+.detailed-assigment .settings {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 890px;
+    left: 25px;
+}
+  
+.detailed-assigment .course-button {
+    position: absolute;
+    width: 88px;
+    height: 50px;
+    top: 119px;
+    left: 6px;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #e6e6e6;
+    background: linear-gradient(
+      180deg,
+      rgba(37, 10, 49, 1) 0%,
+      rgba(82, 36, 127, 1) 100%
+    );
+}
+  
+.detailed-assigment .ENGR {
+    position: absolute;
+    height: 36px;
+    top: 5px;
+    left: 25px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+  
+.detailed-assigment .ENGR-wrapper {
+    top: 184px;
+    position: absolute;
+    width: 88px;
+    height: 50px;
+    left: 6px;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #e6e6e6;
+    background: linear-gradient(
+      180deg,
+      rgba(37, 10, 49, 1) 0%,
+      rgba(113, 32, 151, 1) 100%
+    );
+}
+  
+.detailed-assigment .div-wrapper {
+    top: 249px;
+    position: absolute;
+    width: 88px;
+    height: 50px;
+    left: 6px;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #e6e6e6;
+    background: linear-gradient(
+      180deg,
+      rgba(37, 10, 49, 1) 0%,
+      rgba(113, 32, 151, 1) 100%
+    );
+}
+  
+.detailed-assigment .logo-button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 18px;
+    left: 25px;
+    background-color: #ffffff;
+    border-radius: 180px;
+    overflow: hidden;
+}
+  
+.detailed-assigment .text-wrapper-12 {
+    position: absolute;
+    height: 18px;
+    top: 15px;
+    left: 7px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.detailed-assigment .frame-2 {
+    position: absolute;
+    width: 1271px;
+    height: 358px;
+    top: 190px;
+    left: 128px;
+    background-color: #d9d9d9;
+}
+  
+.detailed-assigment .GO-BACK-button {
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    top: 27px;
+    left: 1279px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+  
+.detailed-assigment .text-wrapper-13 {
+    position: absolute;
+    height: 23px;
+    top: 7px;
+    left: 47px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    white-space: nowrap;
+}
+  
+.detailed-assigment .return-icon {
+    position: absolute;
+    width: 14px;
+    height: 11px;
+    top: 15px;
+    left: 16px;
+}
+  
+.detailed-assigment .text-wrapper-14 {
+    position: absolute;
+    height: 18px;
+    top: 111px;
+    left: 128px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.detailed-assigment .text-wrapper-15 {
+    position: absolute;
+    height: 18px;
+    top: 591px;
+    left: 128px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.detailed-assigment .SECTION-DROPDOWN {
+    position: absolute;
+    width: 1273px;
+    height: 42px;
+    top: 139px;
+    left: 127px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: #d9d9d9;
+}
+  
+.detailed-assigment .select-sections {
+    position: absolute;
+    height: 18px;
+    top: 11px;
+    left: 11px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #b3b3b3;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.detailed-assigment .DROPDOWN-icon {
+    position: absolute;
+    width: 18px;
+    height: 10px;
+    top: 16px;
+    left: 1237px;
+}
+  
+.detailed-assigment .line {
+    position: absolute;
+    width: 2px;
+    height: 25px;
+    top: 7px;
+    left: 1227px;
+}
+  
+.detailed-assigment .horizontal-divider-2 {
+    position: absolute;
+    width: 1271px;
+    height: 1px;
+    top: 787px;
+    left: 128px;
+    object-fit: cover;
+}
+  
+.detailed-assigment .text-wrapper-16 {
+    position: absolute;
+    width: 99px;
+    height: 15px;
+    top: 817px;
+    left: 121px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.detailed-assigment .text-wrapper-17 {
+    position: absolute;
+    width: 99px;
+    height: 15px;
+    top: 897px;
+    left: 121px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.detailed-assigment .TAG-button {
+    position: absolute;
+    width: 419px;
+    height: 25px;
+    top: 843px;
+    left: 128px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: #d9d9d9;
+}
+  
+.detailed-assigment .text-wrapper-18 {
+    position: absolute;
+    height: 16px;
+    top: 4px;
+    left: 20px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #b3b3b3;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.detailed-assigment .DROPDOWN-icon-2 {
+    position: absolute;
+    width: 19px;
+    height: 10px;
+    top: 9px;
+    left: 384px;
+}
+  
+.detailed-assigment .line-2 {
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    top: 6px;
+    left: 374px;
+}
+  
+.detailed-assigment .TAG-button-2 {
+    position: absolute;
+    width: 419px;
+    height: 25px;
+    top: 923px;
+    left: 128px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: #d9d9d9;
+}
+  
+.detailed-assigment .text-wrapper-19 {
+    position: absolute;
+    width: 95px;
+    height: 12px;
+    top: 765px;
+    left: 589px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.detailed-assigment .text-wrapper-20 {
+    position: absolute;
+    width: 95px;
+    height: 12px;
+    top: 765px;
+    left: 128px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.detailed-assigment .text-wrapper-21 {
+    top: 819px;
+    position: absolute;
+    width: 95px;
+    height: 12px;
+    left: 589px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.detailed-assigment .text-wrapper-22 {
+    top: 899px;
+    position: absolute;
+    width: 95px;
+    height: 12px;
+    left: 589px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.detailed-assigment .STATUS-bar {
+    position: absolute;
+    width: 589px;
+    height: 15px;
+    top: 848px;
+    left: 726px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    border: 1px solid;
+    border-color: #d9d9d9;
+}
+  
+.detailed-assigment .STATUS-bar-2 {
+    position: absolute;
+    width: 589px;
+    height: 15px;
+    top: 928px;
+    left: 726px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    border: 1px solid;
+    border-color: #d9d9d9;
+}
+  
+.detailed-assigment .text-wrapper-23 {
+    width: 36px;
+    height: 12px;
+    top: 849px;
+    left: 1345px;
+    font-size: 16px;
+    white-space: nowrap;
+    position: absolute;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+  
+.detailed-assigment .text-wrapper-24 {
+    width: 36px;
+    height: 12px;
+    top: 929px;
+    left: 1345px;
+    font-size: 16px;
+    white-space: nowrap;
+    position: absolute;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}

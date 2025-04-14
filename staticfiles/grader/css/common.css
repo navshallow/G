@@ -1,0 +1,240 @@
+:root {
+  --sidebar-width: 80px; /* CHANGE THIS ONE VALUE to adjust sidebar width */
+ }
+ 
+ 
+ .page-content {
+  margin-left: var(--sidebar-width); 
+ }
+ 
+ 
+ /* Sidebar styles */
+ .LEFT-SIDE-BAR {
+  position: fixed;    
+  top: 0;
+  left: 0;
+  bottom: 0;          
+  width: var(--sidebar-width);
+  background-color: #daacf0;
+  z-index: 1000;
+  overflow: visible; /* Changed from 'hidden' to 'visible' to allow tooltips to extend outside */
+ }
+ 
+ 
+ .LEFT-SIDE-BAR .img {
+  position: absolute;
+  width: calc(var(--sidebar-width) * 0.53);
+  height: 1px;
+  top: 84px;
+  left: calc(var(--sidebar-width) * 0.23);
+  object-fit: cover;
+ }
+ 
+ 
+ .LEFT-SIDE-BAR .divider {
+  position: absolute;
+  width: calc(var(--sidebar-width) * 0.53);
+  height: 1px;
+  top: 60%;
+  left: calc(var(--sidebar-width) * 0.24);
+  object-fit: cover;
+ }
+ 
+ 
+ .LEFT-SIDE-BAR .user {
+  position: absolute;
+  width: calc(var(--sidebar-width) * 0.5);
+  height: calc(var(--sidebar-width) * 0.5);
+  top: 70%;
+  left: calc(var(--sidebar-width) * 0.25);
+ }
+ 
+ 
+ .LEFT-SIDE-BAR .frame {
+  position: absolute;
+  width: calc(var(--sidebar-width) * 0.5);
+  height: calc(var(--sidebar-width) * 0.5);
+  top: 80%;
+  left: calc(var(--sidebar-width) * 0.25);
+  background-color: #52247f;
+  border-radius: 180px;
+ }
+ 
+ 
+ .LEFT-SIDE-BAR .settings {
+  position: absolute;
+  width: calc(var(--sidebar-width) * 0.5);
+  height: calc(var(--sidebar-width) * 0.5);
+  top: 90%;
+  left: calc(var(--sidebar-width) * 0.25);
+ }
+ 
+ 
+ /* Add button with tooltip */
+ .LEFT-SIDE-BAR .add-class-link {
+  position: absolute;
+  width: calc(var(--sidebar-width) * 0.5);
+  height: calc(var(--sidebar-width) * 0.5);
+  top: 52.54%;
+  left: calc(var(--sidebar-width) * 0.25);
+ }
+ 
+ 
+ .LEFT-SIDE-BAR .add-class {
+  position: absolute;
+  width: calc(var(--sidebar-width) * 0.36);
+  height: calc(var(--sidebar-width) * 0.36);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), filter 0.3s ease;
+ }
+ 
+ 
+ .LEFT-SIDE-BAR .add-class-link:hover .add-class {
+  transform: translate(-50%, -50%) rotate(90deg) scale(1.15);
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
+ }
+ 
+ 
+ /* Tooltip for add button - UPDATED to fix overlay issues */
+ .LEFT-SIDE-BAR .tooltip-text {
+  visibility: hidden;
+  background-color: rgba(37, 10, 49, 0.9);
+  color: #ffffff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 6px;
+  position: fixed; /* Changed from absolute to fixed */
+  z-index: 9999;
+  left: var(--sidebar-width); /* Position relative to sidebar width */
+  top: 55%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-family: "Jersey 25", Helvetica;
+  font-size: 12px;
+  white-space: nowrap;
+  margin-left: 8px;
+  pointer-events: none; /* Ensures tooltip doesn't block interactions */
+ }
+ 
+ 
+ .LEFT-SIDE-BAR .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent rgba(37, 10, 49, 0.9) transparent transparent;
+ }
+ 
+ 
+ .LEFT-SIDE-BAR .add-class-link:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+ }
+ 
+ 
+ /* Logo */
+ .LEFT-SIDE-BAR .add-class-2 {
+  position: absolute;
+  width: calc(var(--sidebar-width) * 0.5);
+  height: calc(var(--sidebar-width) * 0.5);
+  top: 18px;
+  left: calc(var(--sidebar-width) * 0.25);
+  background-color: #ffffff;
+  border-radius: 180px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+ }
+ 
+ 
+ .LEFT-SIDE-BAR .add-class-2:hover {
+  transform: scale(1.1);
+ }
+ 
+ 
+ .LEFT-SIDE-BAR .text-wrapper-8 {
+  position: absolute;
+  height: calc(var(--sidebar-width) * 0.18);
+  top: calc(var(--sidebar-width) * 0.15);
+  left: calc(var(--sidebar-width) * 0.07);
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: calc(var(--sidebar-width) * 0.18);
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+ }
+ 
+ 
+ /* Course pills container with scroll */
+ .LEFT-SIDE-BAR .course-pills-container {
+  position: absolute;
+  top: 100px;
+  left: calc(var(--sidebar-width) * 0.02); /* Keep as is */
+  width: calc(var(--sidebar-width) * 0.92); /* Reduced slightly from 0.96 */
+  height: calc(50% - 100px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: calc(var(--sidebar-width) * 0.04); /* Added padding on right */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(82, 36, 127, 0.5) transparent;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+ 
+ 
+ .LEFT-SIDE-BAR .course-pills-container::-webkit-scrollbar {
+  width: 4px;
+ }
+ 
+ 
+ .LEFT-SIDE-BAR .course-pills-container::-webkit-scrollbar-thumb {
+  background-color: rgba(82, 36, 127, 0.5);
+  border-radius: 4px;
+ }
+ 
+ 
+ /* Course pill styling - UPDATED with more subtle hover effect */
+ .LEFT-SIDE-BAR .course-pill {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 15px;
+  background: linear-gradient(180deg, rgba(37, 10, 49, 1) 0%, rgba(82, 36, 127, 1) 100%);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 2px solid #e6e6e6;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  transition: all 0.2s ease;
+ }
+ 
+ 
+ .LEFT-SIDE-BAR .course-pill:hover {
+  border-color: #ffffff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  filter: brightness(1.1);
+ }
+ 
+ 
+ .LEFT-SIDE-BAR .course-pill .ENGR {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 400;
+  color: #ffffff;
+  font-size: calc(var(--sidebar-width) * 0.18);
+  text-align: center;
+  line-height: 1.2;
+ }
+ 
+ 

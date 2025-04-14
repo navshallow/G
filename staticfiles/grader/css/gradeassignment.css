@@ -1,0 +1,596 @@
+.grade-assignment {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .grade-assignment .div {
+    background-color: #ffffff;
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+  }
+  
+  .grade-assignment .LIST-of-questions {
+    position: absolute;
+    width: 620px;
+    height: 900px;
+    top: 98px;
+    left: 137px;
+    background-color: #d9d9d9;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #e6e6e6;
+  }
+  
+  .grade-assignment .QUESTION-button {
+    position: absolute;
+    width: 160px;
+    height: 35px;
+    top: 34px;
+    left: 110px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .grade-assignment .text-wrapper {
+    position: absolute;
+    height: 23px;
+    top: 5px;
+    left: 46px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    white-space: nowrap;
+  }
+  
+  .grade-assignment .RUBRIC-button {
+    position: absolute;
+    width: 160px;
+    height: 35px;
+    top: 34px;
+    left: 350px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .grade-assignment .text-wrapper-2 {
+    position: absolute;
+    height: 23px;
+    top: 5px;
+    left: 56px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    white-space: nowrap;
+  }
+  
+  .grade-assignment .overlap {
+    top: 112px;
+    position: absolute;
+    width: 479px;
+    height: 17px;
+    left: 37px;
+  }
+  
+  .grade-assignment .text-wrapper-3 {
+    position: absolute;
+    width: 99px;
+    height: 15px;
+    top: 0;
+    left: 0;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .grade-assignment .STATUS-bar {
+    position: absolute;
+    width: 400px;
+    height: 15px;
+    top: 2px;
+    left: 79px;
+    background-color: #ffffff;
+    border-radius: 25px;
+  }
+  
+  .grade-assignment .overlap-group {
+    top: 187px;
+    position: absolute;
+    width: 479px;
+    height: 17px;
+    left: 37px;
+  }
+  
+  .grade-assignment .overlap-2 {
+    top: 262px;
+    position: absolute;
+    width: 479px;
+    height: 17px;
+    left: 37px;
+  }
+  
+  .grade-assignment .overlap-3 {
+    top: 337px;
+    position: absolute;
+    width: 479px;
+    height: 17px;
+    left: 37px;
+  }
+  
+  .grade-assignment .overlap-group-2 {
+    top: 412px;
+    position: absolute;
+    width: 479px;
+    height: 17px;
+    left: 37px;
+  }
+  
+  .grade-assignment .overlap-4 {
+    top: 487px;
+    position: absolute;
+    width: 479px;
+    height: 17px;
+    left: 37px;
+  }
+  
+  .grade-assignment .overlap-5 {
+    top: 562px;
+    position: absolute;
+    width: 479px;
+    height: 17px;
+    left: 37px;
+  }
+  
+  .grade-assignment .TAG-button {
+    position: absolute;
+    width: 200px;
+    height: 25px;
+    top: 146px;
+    left: 316px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  
+  .grade-assignment .text-wrapper-4 {
+    position: absolute;
+    height: 16px;
+    top: 4px;
+    left: 20px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #b3b3b3;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .grade-assignment .DROPDOWN-icon {
+    position: absolute;
+    width: 19px;
+    height: 10px;
+    top: 9px;
+    left: 167px;
+  }
+  
+  .grade-assignment .line {
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    top: 6px;
+    left: 158px;
+  }
+  
+  .grade-assignment .TAG-button-2 {
+    top: 221px;
+    position: absolute;
+    width: 200px;
+    height: 25px;
+    left: 316px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  
+  .grade-assignment .TAG-button-3 {
+    top: 296px;
+    position: absolute;
+    width: 200px;
+    height: 25px;
+    left: 316px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  
+  .grade-assignment .TAG-button-4 {
+    top: 371px;
+    position: absolute;
+    width: 200px;
+    height: 25px;
+    left: 316px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  
+  .grade-assignment .TAG-button-5 {
+    top: 446px;
+    position: absolute;
+    width: 200px;
+    height: 25px;
+    left: 316px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  
+  .grade-assignment .TAG-button-6 {
+    top: 521px;
+    position: absolute;
+    width: 200px;
+    height: 25px;
+    left: 316px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  
+  .grade-assignment .TAG-button-7 {
+    top: 596px;
+    position: absolute;
+    width: 200px;
+    height: 25px;
+    left: 316px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  
+  .grade-assignment .text-wrapper-5 {
+    position: absolute;
+    width: 36px;
+    height: 12px;
+    top: 114px;
+    left: 546px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .grade-assignment .text-wrapper-6 {
+    position: absolute;
+    width: 95px;
+    height: 12px;
+    top: 151px;
+    left: 116px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .grade-assignment .text-wrapper-7 {
+    top: 226px;
+    position: absolute;
+    width: 95px;
+    height: 12px;
+    left: 116px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .grade-assignment .text-wrapper-8 {
+    top: 301px;
+    position: absolute;
+    width: 95px;
+    height: 12px;
+    left: 116px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .grade-assignment .text-wrapper-9 {
+    top: 376px;
+    position: absolute;
+    width: 95px;
+    height: 12px;
+    left: 116px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .grade-assignment .text-wrapper-10 {
+    top: 451px;
+    position: absolute;
+    width: 95px;
+    height: 12px;
+    left: 116px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .grade-assignment .text-wrapper-11 {
+    top: 526px;
+    position: absolute;
+    width: 95px;
+    height: 12px;
+    left: 116px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .grade-assignment .text-wrapper-12 {
+    top: 601px;
+    position: absolute;
+    width: 95px;
+    height: 12px;
+    left: 116px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .grade-assignment .text-wrapper-13 {
+    top: 189px;
+    position: absolute;
+    width: 36px;
+    height: 12px;
+    left: 546px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .grade-assignment .text-wrapper-14 {
+    top: 264px;
+    position: absolute;
+    width: 36px;
+    height: 12px;
+    left: 546px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .grade-assignment .text-wrapper-15 {
+    top: 339px;
+    position: absolute;
+    width: 36px;
+    height: 12px;
+    left: 546px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .grade-assignment .text-wrapper-16 {
+    top: 489px;
+    position: absolute;
+    width: 36px;
+    height: 12px;
+    left: 546px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .grade-assignment .text-wrapper-17 {
+    top: 414px;
+    position: absolute;
+    width: 36px;
+    height: 12px;
+    left: 546px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .grade-assignment .text-wrapper-18 {
+    top: 564px;
+    position: absolute;
+    width: 36px;
+    height: 12px;
+    left: 546px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .grade-assignment .FILE-UPLOAD-PREVIEW {
+    position: absolute;
+    width: 620px;
+    height: 900px;
+    top: 98px;
+    left: 779px;
+    background-color: #d9d9d9;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #e6e6e6;
+  }
+  
+  .grade-assignment .text-wrapper-19 {
+    position: absolute;
+    height: 18px;
+    top: 448px;
+    left: 246px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .grade-assignment .frame {
+    top: 767px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 553px;
+  }
+  
+  .grade-assignment .img {
+    top: 832px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 553px;
+  }
+  
+  .grade-assignment .text-wrapper-20 {
+    position: absolute;
+    height: 18px;
+    top: 70px;
+    left: 137px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .grade-assignment .p {
+    position: absolute;
+    height: 24px;
+    top: 30px;
+    left: 137px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .grade-assignment .GO-BACK-button {
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    top: 23px;
+    left: 1279px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .grade-assignment .text-wrapper-21 {
+    position: absolute;
+    height: 23px;
+    top: 7px;
+    left: 47px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    white-space: nowrap;
+  }
+  
+  .grade-assignment .return-icon {
+    position: absolute;
+    width: 14px;
+    height: 11px;
+    top: 15px;
+    left: 16px;
+  }
+  
+  .grade-assignment .LEFT-SIDE-BAR {
+    display: none;
+  }
+  

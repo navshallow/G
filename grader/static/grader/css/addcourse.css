@@ -18,17 +18,16 @@
 
 .add-course-card {
   width: 100%;
-  max-width: 700px; /* Increased size */
+  max-width: 700px; 
   background: white;
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(82, 36, 127, 0.15);
-  padding: 50px; /* More padding */
-  /* Removed hover transform to prevent movement */
+  padding: 50px; 
 }
 
 .title {
   font-family: "Jersey 25", Helvetica;
-  font-size: 32px; /* Larger font */
+  font-size: 32px; 
   color: #52247f;
   margin-bottom: 40px;
   text-align: center;
@@ -71,7 +70,7 @@ label {
 }
 
 .form-input::placeholder {
-  color: #999999; /* Middle ground for placeholder text - not too faint, not too bold */
+  color: #999999;
   opacity: 0.8;
 }
 
@@ -83,7 +82,7 @@ label {
 
 .helper-text {
   font-size: 13px;
-  color: #777; /* Slightly bolder than before */
+  color: #777; /*  bolder than before */
   margin-top: 5px;
 }
 

@@ -8,9 +8,11 @@
   <!-- Course pills container with scroll -->
   <div class="course-pills-container">
     {% for course in courses %}
-    <a href="#" class="course-pill">
+    {% if not course.is_archived %}
+    <a href="{% url 'course_assignments' course.id %}" class="course-pill">
       <div class="ENGR">{{ course.abbreviation }}<br />{{ course.course_number }}{% if course.section_number %} [{{ course.section_number }}]{% endif %}</div>
     </a>
+    {% endif %}
     {% empty %}
     <!-- Show placeholder if no courses exist -->
     <div class="course-pill empty-course">
@@ -19,17 +21,20 @@
     {% endfor %}
   </div>
   
-  <!-- Add button with proper positioning -->
   <a href="{% url 'add_course' %}" class="add-class-link">
     <img class="add-class" src="https://c.animaapp.com/m91w337xrYzkuo/img/add-class.svg" alt="Add Class" />
     <span class="tooltip-text">Add Course</span>
   </a>
   
-  <!-- Single divider below plus sign -->
   <img class="divider" src="https://c.animaapp.com/m91w337xrYzkuo/img/divider.svg" alt="Divider" />
   
-  <!-- User controls with original spacing -->
   <img class="user" src="https://c.animaapp.com/m91w337xrYzkuo/img/user.svg" alt="User" />
+  
+  <a href="#" id="archivedCoursesBtn" class="archive-button-link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="archive-icon"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+    <span class="tooltip-text">Archived Courses</span>
+  </a>
+  
   <div class="frame"></div>
   <img class="settings" src="https://c.animaapp.com/m91w337xrYzkuo/img/settings.svg" alt="Settings" />
 </div>

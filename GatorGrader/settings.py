@@ -1,4 +1,5 @@
 from pathlib import Path
+import os  # Add this import at the top
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -102,3 +103,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
+STATIC_URL = '/static/'  
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'grader', 'static'),
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

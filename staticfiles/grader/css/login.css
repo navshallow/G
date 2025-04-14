@@ -1,0 +1,367 @@
+/* Centers the design in the viewport */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* for disabling scrolling */
+}
+
+.box {
+  width: 1480px;
+  height: 1064px;
+  position: fixed; /* Keeps the box fixed relative to the viewport */
+  top: 50%;
+  left: calc(50% + 20px); 
+  transform: translate(-50%, -50%) scale(.87); /* Changed from 1.1 to 0.83 */
+  transform-origin: center center;
+}
+
+/* Existing styles for the design */
+.box .log-in-page {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.box .property-default {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  background-color: #ffffff;
+}
+
+.box .DSO-LOG-IN-button {
+  position: absolute;
+  width: 600px;
+  height: 50px;
+  top: 822px;
+  left: 420px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 2px solid;
+  border-color: #e6e6e6;
+}
+
+.box .text-wrapper {
+  position: absolute;
+  height: 18px;
+  top: 14px;
+  left: 330px;
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.box .DSO-icon {
+  position: absolute;
+  width: 38px;
+  height: 20px;
+  top: 16px;
+  left: 242px;
+}
+
+.box .MICROSOFT-LOG-IN {
+  position: absolute;
+  width: 600px;
+  height: 50px;
+  top: 662px;
+  left: 420px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 2px solid;
+  border-color: #e6e6e6;
+}
+
+.box .div {
+  position: absolute;
+  height: 18px;
+  top: 14px;
+  left: 263px;
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.box .LOG-IN-button {
+  position: absolute;
+  width: 600px;
+  height: 50px;
+  top: 436px;
+  left: 420px;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 2px solid;
+  border-color: #e6e6e6;
+  background: linear-gradient(
+      180deg,
+      rgba(82, 36, 127, 1) 0%,
+      rgba(148, 65, 229, 1) 100%
+  );
+}
+
+.box .text-wrapper-2 {
+  position: absolute;
+  height: 30px;
+  top: 8px;
+  left: 265px;
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.box .GOOGLE-LOG-IN-button {
+  position: absolute;
+  width: 600px;
+  height: 50px;
+  top: 582px;
+  left: 420px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 2px solid;
+  border-color: #e6e6e6;
+}
+
+.box .text-wrapper-3 {
+  position: absolute;
+  height: 18px;
+  top: 14px;
+  left: 275px;
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.box .APPLE-LOG-IN-button {
+  position: absolute;
+  width: 600px;
+  height: 50px;
+  top: 742px;
+  left: 420px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 2px solid;
+  border-color: #e6e6e6;
+}
+
+.box .text-wrapper-4 {
+  position: absolute;
+  height: 18px;
+  top: 14px;
+  left: 281px;
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.box .p {
+  position: absolute;
+  height: 30px;
+  top: 95px;
+  left: 536px;
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.box .text-wrapper-5 {
+  position: absolute;
+  height: 18px;
+  top: 323px;
+  left: 560px;
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.box .text-wrapper-6 {
+  position: absolute;
+  height: 18px;
+  top: 324px;
+  left: 787px;
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.box .text-wrapper-7 {
+  position: absolute;
+  height: 18px;
+  top: 522px;
+  left: 667px;
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.box .text-wrapper-8 {
+  position: absolute;
+  height: 18px;
+  top: 951px;
+  left: 632px;
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.box .overlap {
+  top: 185px;
+  position: absolute;
+  width: 431px;
+  height: 42px;
+  left: 519px;
+  border-radius: 10px;
+}
+
+.box .div-wrapper {
+  position: absolute;
+  width: 431px;
+  height: 42px;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #d9d9d9;
+}
+
+.box .text-wrapper-9 {
+  position: absolute;
+  height: 18px;
+  top: 11px;
+  left: 11px;
+  font-family: "Jersey 25", Helvetica;
+  font-weight: 400;
+  color: #b3b3b3;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.box .overlap-group {
+  top: 265px;
+  position: absolute;
+  width: 431px;
+  height: 42px;
+  left: 519px;
+  border-radius: 10px;
+}
+
+.box .divider {
+  width: 220px;
+  top: 531px;
+  left: 420px;
+  position: absolute;
+  height: 1px;
+  object-fit: cover;
+}
+
+.box .img {
+  width: 600px;
+  top: 921px;
+  left: 420px;
+  position: absolute;
+  height: 1px;
+  object-fit: cover;
+}
+
+.box .divider-2 {
+  width: 220px;
+  top: 531px;
+  left: 800px;
+  position: absolute;
+  height: 1px;
+  object-fit: cover;
+}
+
+.box .remember-me-check {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 324px;
+  left: 520px;
+  border-radius: 5px;
+  border: 2px solid;
+  border-color: #5b5b5b;
+}
+
+.box .username-log-in-icon {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 188px;
+  left: 455px;
+}
+
+.box .password-icon {
+  position: absolute;
+  width: 27px;
+  height: 35px;
+  top: 268px;
+  left: 459px;
+}
+
+.purple-link {
+  color: rgba(82, 36, 127, 1); 
+  text-decoration: none; 
+}
+
+.purple-link:hover {
+  text-decoration: underline;
+}

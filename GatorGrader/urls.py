@@ -3,5 +3,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('grader.urls')),  # Directs root URL to your app URLs
+    path('', include('grader.urls')),  
 ]

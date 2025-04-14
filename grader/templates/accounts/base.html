@@ -4,7 +4,6 @@
   <head>
     <meta charset="utf-8" />
     <link href="https://fonts.googleapis.com/css?family=Jersey+25:400" rel="stylesheet" />
-    <!-- Updated paths -->
     <link rel="stylesheet" href="{% static 'grader/css/globals.css' %}" />
     <link rel="stylesheet" href="{% static 'grader/css/common.css' %}" />
     {% block head_extra %}{% endblock %}
@@ -15,5 +14,33 @@
     <div class="page-content">
       {% block content %}{% endblock %}
     </div>
+    
+    <!-- Archived Courses Modal -->
+    <div id="archivedCoursesModal" class="archived-courses-modal">
+      <div class="modal-content">
+        <h2>Archived Courses</h2>
+        
+        <div class="archive-list" id="archivedCoursesList">
+          <!-- Archived courses will be loaded here -->
+          <div class="no-archive-items">No archived courses found.</div>
+        </div>
+        
+        <div class="modal-buttons">
+          <button class="modal-cancel" id="cancelArchivedCoursesBtn">
+            Close
+          </button>
+          <button class="modal-restore" id="restoreCourseBtn" disabled>
+            Restore Course
+          </button>
+          <button class="modal-delete-forever" id="deleteForeverCourseBtn" disabled>
+            Delete Forever
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Modular JavaScript loading -->
+    <script type="module" src="{% static 'grader/js/assignmentbylist/main.js' %}"></script>
+    <script type="module" src="{% static 'grader/js/assignmentbylist/archive.js' %}"></script>
   </body>
 </html>

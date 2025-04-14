@@ -1,0 +1,979 @@
+/* Main container for the assignment-by-list page */
+.assignment-by-list {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Outer wrapper for centered content */
+.assignment-by-list .div {
+    background-color: #ffffff;
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+}
+
+/* SVG icon styling */
+.icon-svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    vertical-align: middle;
+}
+
+.delete-icon-wrapper {
+    color: #e74c3c;
+    margin-right: 5px;
+    cursor: pointer;
+    display: none;
+    width: 16px;
+    height: 16px;
+}
+
+.edit-icon-wrapper {
+    color: #52247f;
+    margin-right: 5px;
+    cursor: pointer;
+    display: none;
+    width: 16px;
+    height: 16px;
+}
+
+/* Preview panel styling */
+.assignment-by-list .PREVIEW {
+    position: fixed;
+    width: 680px;
+    height: 740px;
+    top: 0;
+    right: -680px; /* Start offscreen */
+    background-color: #e6e6e6;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: right 0.3s ease-in-out;
+    z-index: 5;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Preview content area */
+.assignment-by-list .preview-content {
+    padding: 15px;
+    margin-top: 60px;
+    height: calc(100% - 100px);
+    overflow-y: auto;
+}
+
+.assignment-by-list .preview-header {
+    font-family: "Jersey 25", Helvetica;
+    font-size: 24px;
+    font-weight: bold;
+    color: #52247f;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #daacf0;
+}
+
+.assignment-by-list .preview-detail {
+    font-family: "Jersey 25", Helvetica;
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.assignment-by-list .preview-file-btn {
+    background-color: #daacf0;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-family: "Jersey 25", Helvetica;
+    font-size: 14px;
+}
+
+.assignment-by-list .preview-file-btn:hover {
+    background-color: #c695d8;
+}
+
+/* Preview shown state */
+.assignment-by-list .preview-shown {
+    right: 0;
+}
+
+/* Preview text and icon */
+.assignment-by-list .text-wrapper {
+    top: 20px;
+    left: 321px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 30px;
+    text-align: center;
+    white-space: nowrap;
+    position: absolute;
+    height: 30px;
+}
+
+.assignment-by-list .preview-icon {
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    left: 271px;
+    position: absolute;
+}
+
+/* Course title */
+.assignment-by-list .p {
+    position: absolute;
+    height: 24px;
+    top: 30px;
+    left: 125px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+/* Assignment rows styling */
+.assignment-by-list .text-wrapper-2,
+.assignment-by-list .text-wrapper-3,
+.assignment-by-list .text-wrapper-4,
+.assignment-by-list .text-wrapper-5,
+.assignment-by-list .text-wrapper-6,
+.assignment-by-list .text-wrapper-7,
+.assignment-by-list .text-wrapper-8,
+.assignment-by-list .new-assignment {
+    position: absolute;
+    height: 18px;
+    left: 125px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.assignment-by-list .assignment-row:hover {
+    background-color: #f5f5f5;
+}
+
+/* Specific positioning for each assignment row */
+.assignment-by-list .text-wrapper-2 { top: 238px; }
+.assignment-by-list .text-wrapper-3 { top: 281px; }
+.assignment-by-list .text-wrapper-4 { top: 324px; }
+.assignment-by-list .text-wrapper-5 { top: 367px; }
+.assignment-by-list .text-wrapper-6 { top: 410px; }
+.assignment-by-list .text-wrapper-7 { top: 453px; }
+.assignment-by-list .text-wrapper-8 { top: 496px; }
+
+/* Better icon positioning */
+.assignment-by-list .assignment-row {
+    display: flex;
+    align-items: center;
+}
+
+.assignment-by-list .assignment-text {
+    margin-left: 5px;
+}
+
+/* Assignment rows in delete/edit mode */
+.assignment-by-list .assignment-row.delete-mode,
+.assignment-by-list .assignment-row.edit-mode {
+    position: relative;
+}
+
+/* Sidebar elements (if needed on this page) */
+.assignment-by-list .LEFT-SIDE-BAR {
+    position: absolute;
+    width: 100px;
+    height: 1024px;
+    top: 0;
+    left: 0;
+    background-color: #daacf0;
+}
+
+.assignment-by-list .divider {
+    position: absolute;
+    width: 53px;
+    height: 1px;
+    top: 600px;
+    left: 24px;
+    object-fit: cover;
+}
+
+.assignment-by-list .img {
+    position: absolute;
+    width: 53px;
+    height: 1px;
+    top: 84px;
+    left: 23px;
+    object-fit: cover;
+}
+
+.assignment-by-list .user {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 700px;
+    left: 25px;
+}
+
+.assignment-by-list .frame {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 795px;
+    left: 25px;
+    background-color: #52247f;
+    border-radius: 180px;
+}
+
+.assignment-by-list .add-class {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 540px;
+    left: 32px;
+}
+
+.assignment-by-list .settings {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 890px;
+    left: 25px;
+}
+
+.assignment-by-list .course-button {
+    position: absolute;
+    width: 88px;
+    height: 50px;
+    top: 119px;
+    left: 6px;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #e6e6e6;
+    background: linear-gradient(180deg, rgba(37,10,49,1) 0%, rgba(82,36,127,1) 100%);
+}
+
+.assignment-by-list .ENGR {
+    position: absolute;
+    height: 36px;
+    top: 5px;
+    left: 25px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.assignment-by-list .ENGR-wrapper {
+    position: absolute;
+    top: 184px;
+    left: 6px;
+    width: 88px;
+    height: 50px;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #e6e6e6;
+    background: linear-gradient(180deg, rgba(37,10,49,1) 0%, rgba(113,32,151,1) 100%);
+}
+
+.assignment-by-list .div-wrapper {
+    position: absolute;
+    top: 249px;
+    left: 6px;
+    width: 88px;
+    height: 50px;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #e6e6e6;
+    background: linear-gradient(180deg, rgba(37,10,49,1) 0%, rgba(113,32,151,1) 100%);
+}
+
+.assignment-by-list .logo-button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 18px;
+    left: 25px;
+    background-color: #ffffff;
+    border-radius: 180px;
+    overflow: hidden;
+}
+
+.assignment-by-list .text-wrapper-9 {
+    position: absolute;
+    height: 18px;
+    top: 15px;
+    left: 7px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.assignment-by-list .frame-2 {
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    top: 95px;
+    left: 125px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.assignment-by-list .frame-2:hover {
+    background-color: #c695d8;
+}
+
+.assignment-by-list .text-wrapper-10 {
+    position: absolute;
+    height: 18px;
+    top: 9px;
+    left: 46px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.assignment-by-list .create-file-icon {
+    position: absolute;
+    width: 26px;
+    height: 21px;
+    top: 8px;
+    left: 8px;
+}
+
+.assignment-by-list .frame-3 {
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    top: 95px;
+    left: 275px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.assignment-by-list .frame-3:hover {
+    background-color: #c695d8;
+}
+
+.assignment-by-list .text-wrapper-11 {
+    position: absolute;
+    height: 18px;
+    top: 8px;
+    left: 41px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.assignment-by-list .upload-icon {
+    position: absolute;
+    width: 19px;
+    height: 23px;
+    top: 6px;
+    left: 12px;
+}
+
+.assignment-by-list .frame-4 {
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    top: 95px;
+    left: 425px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.assignment-by-list .frame-4:hover {
+    background-color: #c695d8;
+}
+
+.assignment-by-list .text-wrapper-12 {
+    position: absolute;
+    height: 18px;
+    top: 9px;
+    left: 54px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.assignment-by-list .edit-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 6px;
+    left: 19px;
+}
+
+.assignment-by-list .frame-5 {
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    top: 95px;
+    left: 575px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.assignment-by-list .frame-5:hover {
+    background-color: #c695d8;
+}
+
+.assignment-by-list .text-wrapper-13 {
+    position: absolute;
+    height: 18px;
+    top: 8px;
+    left: 44px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.assignment-by-list .delete-icon {
+    position: absolute;
+    width: 19px;
+    height: 21px;
+    top: 7px;
+    left: 15px;
+}
+
+/* GRADE buttons styling */
+.assignment-by-list [class^="GRADE-button"] {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    left: 600px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.assignment-by-list [class^="GRADE-button"]:hover {
+    background-color: #c695d8;
+}
+
+/* Specific positioning for GRADE buttons */
+.assignment-by-list .GRADE-button { top: 233px; }
+.assignment-by-list .GRADE-button-2 { top: 276px; }
+.assignment-by-list .GRADE-button-3 { top: 319px; }
+.assignment-by-list .GRADE-button-4 { top: 362px; }
+.assignment-by-list .GRADE-button-5 { top: 405px; }
+.assignment-by-list .GRADE-button-6 { top: 448px; }
+.assignment-by-list .GRADE-button-7 { top: 491px; }
+
+/* STATS buttons styling */
+.assignment-by-list [class^="STATS-button"] {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    left: 720px;
+    background-color: #daacf0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.assignment-by-list [class^="STATS-button"]:hover {
+    background-color: #c695d8;
+}
+
+/* Specific positioning for STATS buttons */
+.assignment-by-list .STATS-button { top: 233px; }
+.assignment-by-list .STATS-button-2 { top: 276px; }
+.assignment-by-list .STATS-button-3 { top: 319px; }
+.assignment-by-list .STATS-button-4 { top: 362px; }
+.assignment-by-list .STATS-button-5 { top: 405px; }
+.assignment-by-list .STATS-button-6 { top: 448px; }
+.assignment-by-list .STATS-button-7 { top: 491px; }
+
+.assignment-by-list .text-wrapper-14 {
+    position: absolute;
+    height: 18px;
+    top: 5px;
+    left: 27px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.assignment-by-list .FILTER-button {
+    all: unset;
+    box-sizing: border-box;
+    position: absolute;
+    width: 70px;
+    height: 25px;
+    top: 160px;
+    left: 125px;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.assignment-by-list .FILTER-button:hover {
+    background-color: #d6d6d6;
+}
+
+.assignment-by-list .text-wrapper-15 {
+    position: absolute;
+    height: 16px;
+    top: 4px;
+    left: 32px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.assignment-by-list .filter-icon {
+    position: absolute;
+    width: 15px;
+    height: 10px;
+    top: 8px;
+    left: 5px;
+}
+
+.assignment-by-list .SORT-BY-button {
+    position: absolute;
+    width: 90px;
+    height: 25px;
+    top: 160px;
+    left: 220px;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.assignment-by-list .SORT-BY-button:hover {
+    background-color: #d6d6d6;
+}
+
+.assignment-by-list .text-wrapper-16 {
+    position: absolute;
+    height: 16px;
+    top: 4px;
+    left: 34px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.assignment-by-list .sort-by-icon {
+    position: absolute;
+    width: 19px;
+    height: 10px;
+    top: 8px;
+    left: 10px;
+}
+
+.assignment-by-list .SORT-BY-button-2 {
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    top: 160px;
+    left: 335px;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.assignment-by-list .SORT-BY-button-2:hover {
+    background-color: #d6d6d6;
+}
+
+.assignment-by-list .text-wrapper-17 {
+    position: absolute;
+    height: 16px;
+    top: 4px;
+    left: 14px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.assignment-by-list .past-assignments-button {
+    position: absolute;
+    width: 135px;
+    height: 25px;
+    top: 160px;
+    left: 460px;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.assignment-by-list .past-assignments-button:hover {
+    background-color: #d6d6d6;
+}
+
+.assignment-by-list .past-assignments-text {
+    position: absolute;
+    height: 16px;
+    top: 4px;
+    left: 14px;
+    font-family: "Jersey 25", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+/* Close button for preview */
+.assignment-by-list .close-preview {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #daacf0;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 10;
+    color: #52247f;
+    transition: background-color 0.3s;
+}
+
+.assignment-by-list .close-preview:hover {
+    background-color: #c695d8;
+}
+
+/* Delete course button */
+.assignment-by-list .delete-course-button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    padding: 8px 15px;
+    background-color: #daacf0;
+    border: none;
+    border-radius: 10px;
+    color: #000000;
+    font-family: "Jersey 25", Helvetica;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 4; /* Lower than preview */
+    transition: background-color 0.3s;
+}
+
+.assignment-by-list .delete-course-button:hover {
+    background-color: #c695d8;
+}
+
+/* Modal styling (for both create and past assignments) */
+.assignment-by-list .create-modal,
+.assignment-by-list .past-assignments-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.assignment-by-list .create-modal.modal-visible,
+.assignment-by-list .past-assignments-modal.modal-visible {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.assignment-by-list .modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.assignment-by-list .modal-content h2 {
+    margin-top: 0;
+    color: #52247f;
+    font-family: "Jersey 25", Helvetica, sans-serif;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.assignment-by-list .form-group {
+    margin-bottom: 20px;
+}
+
+.assignment-by-list .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: "Jersey 25", Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.assignment-by-list .form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #daacf0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.assignment-by-list .form-group input:focus {
+    border-color: #52247f;
+    box-shadow: 0 0 0 3px rgba(218, 172, 240, 0.3);
+    outline: none;
+}
+
+/* Checkbox styling */
+.assignment-by-list .checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.assignment-by-list .checkbox-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.assignment-by-list .checkbox-item input {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    accent-color: #52247f;
+}
+
+.assignment-by-list .checkbox-item label {
+    display: inline;
+    margin: 0;
+    font-size: 14px;
+}
+
+.assignment-by-list .modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+.assignment-by-list .modal-cancel {
+    background-color: #e6e6e6;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-family: "Jersey 25", Helvetica, sans-serif;
+    transition: background-color 0.3s;
+}
+
+.assignment-by-list .modal-cancel:hover {
+    background-color: #d6d6d6;
+}
+
+.assignment-by-list .modal-create,
+.assignment-by-list .modal-restore,
+.assignment-by-list .modal-delete-forever {
+    background-color: #daacf0;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-family: "Jersey 25", Helvetica, sans-serif;
+    transition: background-color 0.3s;
+}
+
+.assignment-by-list .modal-create:hover,
+.assignment-by-list .modal-restore:hover {
+    background-color: #c695d8;
+}
+
+.assignment-by-list .modal-delete-forever {
+    background-color: #ff6b6b;
+    color: white;
+    margin-left: 10px;
+}
+
+.assignment-by-list .modal-delete-forever:hover {
+    background-color: #ff5252;
+}
+
+/* Disabled button styling */
+.assignment-by-list button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Past assignments list styling */
+.assignment-by-list .past-assignments-list {
+    max-height: 300px;
+    overflow-y: auto;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.assignment-by-list .past-assignment-item {
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.assignment-by-list .past-assignment-item:hover {
+    background-color: #f0f0f0;
+}
+
+.assignment-by-list .past-assignment-item.selected {
+    background-color: #daacf0;
+}
+
+.assignment-by-list .past-assignment-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.assignment-by-list .past-assignment-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+.assignment-by-list .no-past-assignments {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+}
+
+/* File upload styling */
+.assignment-by-list .file-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.assignment-by-list .file-action-btn, 
+.assignment-by-list .file-upload-label {
+    background-color: #daacf0;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-family: "Jersey 25", Helvetica, sans-serif;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    display: inline-block;
+    text-align: center;
+}
+
+.assignment-by-list .file-action-btn:hover,
+.assignment-by-list .file-upload-label:hover {
+    background-color: #c695d8;
+}
+
+.assignment-by-list .uploaded-file-info {
+    width: 100%;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #52247f;
+}

@@ -58,8 +58,8 @@ html, body {
 /* Modified width and positioning of the stats boxes */
 .home-page .COURSE-OVERALL-STATS {
   position: absolute;
-  width: 745px; /* Updated width: 705 + 40 */
-  height: 444px; /* Updated height: 434 + 10 */
+  width: 745px; 
+  height: 444px; 
   top: 98px;
   left: 137px;
   background-color: #fafaf5;
@@ -72,7 +72,7 @@ html, body {
   position: absolute;
   height: 18px;
   top: 14px;
-  left: 272px; /* Adjusted center position for wider box */
+  left: 272px; 
   font-family: "Jersey 25", Helvetica;
   font-weight: 400;
   color: #000000;
@@ -83,13 +83,12 @@ html, body {
   white-space: nowrap;
 }
 
-/* Adjusted course button positions for wider box */
 .home-page .course-button {
   position: absolute;
   width: 88px;
   height: 21px;
-  top: 408px; /* Adjusted for taller box */
-  left: 55px; /* Adjusted position */
+  top: 408px; 
+  left: 55px; 
   border-radius: 24px;
   overflow: hidden;
   border: 2px solid #e6e6e6;
@@ -117,8 +116,8 @@ html, body {
 
 .home-page .div-wrapper {
   height: 21px;
-  top: 408px; /* Adjusted for taller box */
-  left: 345px; /* Adjusted position */
+  top: 408px; 
+  left: 345px;
   background: linear-gradient(
     180deg,
     rgba(37,10,49,1) 0%,
@@ -149,7 +148,7 @@ html, body {
 .home-page .course-button-2 {
   height: 21px;
   top: 408px; /* Adjusted for taller box */
-  left: 200px; /* Adjusted position */
+  left: 200px; 
   background: linear-gradient(
     180deg,
     rgba(37,10,49,1) 0%,
@@ -165,7 +164,7 @@ html, body {
 .home-page .course-button-3 {
   height: 21px;
   top: 408px; /* Adjusted for taller box */
-  left: 490px; /* Adjusted position */
+  left: 490px; 
   background: linear-gradient(
     180deg,
     rgba(37,10,49,1) 0%,
@@ -195,8 +194,8 @@ html, body {
 
 .home-page .course-button-4 {
   height: 21px;
-  top: 408px; /* Adjusted for taller box */
-  left: 635px; /* Adjusted position */
+  top: 408px; 
+  left: 635px; 
   background: linear-gradient(
     180deg,
     rgba(37,10,49,1) 0%,
@@ -238,10 +237,10 @@ html, body {
 
 .home-page .TO-DO {
   position: absolute;
-  width: 745px; /* Updated width: 705 + 40 */
-  height: 444px; /* Updated height: 434 + 10 */
+  width: 745px; 
+  height: 444px; 
   top: 563px;
-  left: 905px; /* Adjusted position to reduce gap */
+  left: 905px; 
   background-color: #fafaf5;
   border-radius: 25px;
   overflow: hidden;
@@ -252,7 +251,7 @@ html, body {
   position: absolute;
   height: 18px;
   top: 14px;
-  left: 336px; /* Adjusted center position */
+  left: 336px; 
   font-family: "Jersey 25", Helvetica;
   font-weight: 400;
   color: #000000;
@@ -265,8 +264,8 @@ html, body {
 
 .home-page .ASIGNMENT-STATS {
   position: absolute;
-  width: 745px; /* Updated width: 705 + 40 */
-  height: 444px; /* Updated height: 434 + 10 */
+  width: 745px; 
+  height: 444px; 
   top: 98px;
   left: 905px; /* Adjusted position to reduce gap */
   background-color: #fafaf5;
@@ -312,7 +311,7 @@ html, body {
   width: 120px;
   height: 45px;
   top: 21px;
-  left: 1530px; /* Adjusted position */
+  left: 1530px; 
   background-color: #52247f;
   border-radius: 10px;
   overflow: hidden;
@@ -338,7 +337,7 @@ html, body {
   width: 120px;
   height: 45px;
   top: 21px;
-  left: 1380px; /* Adjusted position */
+  left: 1380px; 
   background-color: #52247f;
   border-radius: 10px;
   overflow: hidden;

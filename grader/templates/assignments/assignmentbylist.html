@@ -1,56 +1,440 @@
 {% extends 'accounts/base.html' %}
 {% load static %}
 {% block head_extra %}
-  <link rel="stylesheet" href="{% static 'grader/css/assignmentbylist.css' %}" />
+  <link rel="stylesheet" href="{% static 'grader/css/assignmentbylist.css' %}?v={% now 'U' %}" />
+  <!-- JavaScript is  loaded from base.html as modules -->
 {% endblock %}
-{% block title %}Assignmentbylist - Gator Grader{% endblock %}
+{% block title %}{{ course.abbreviation }} {{ course.course_number }} Assignments - Gator Grader{% endblock %}
 {% block content %}
 <div class="assignment-by-list">
-  <div class="div">
-    <div class="PREVIEW">
-      <div class="text-wrapper">Preview</div>
-      <img class="preview-icon" src="https://c.animaapp.com/m92bfqd0MOyKRh/img/preview-icon.svg" alt="Preview Icon" />
+  <div class="course-container">
+    <!-- Course Information -->
+    <div class="course-info">
+      <h1 class="course-header">{{ course.abbreviation }} {{ course.course_number }} - {{ course.full_name }}</h1>
+      <p class="course-semester">{{ course.semester }} {{ course.year }}</p>
     </div>
-    <p class="p">ENGR 101 - (CLASS NAME)</p>
-    <div class="text-wrapper-2">Assignment 1 -</div>
-    <div class="text-wrapper-3">Assignment 2 -</div>
-    <div class="text-wrapper-4">Assignment 3 -</div>
-    <div class="text-wrapper-5">Assignment 4 -</div>
-    <div class="text-wrapper-6">Test 1 -</div>
-    <div class="text-wrapper-7">Test 2 -</div>
-    <div class="text-wrapper-8">Summary 1 -</div>
-    <div class="frame-2">
-      <div class="text-wrapper-10">Create</div>
-      <img class="create-file-icon" src="https://c.animaapp.com/m92bfqd0MOyKRh/img/create-file-icon.svg" alt="Create File Icon" />
+    
+    <div class="course-admin-buttons">
+      <button class="settings-button" id="settingsBtn" title="Course Settings">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+      </button>
+      <button class="delete-course-button" id="deleteCourseBtn" data-course-id="{{ course.id }}">
+        Delete Course
+      </button>
     </div>
-    <div class="frame-3">
-      <div class="text-wrapper-11">Upload</div>
-      <img class="upload-icon" src="https://c.animaapp.com/m92bfqd0MOyKRh/img/upload-icon.svg" alt="Upload Icon" />
+    
+    <div class="top-action-bar">
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search assignments...">
+        <button class="search-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+      </div>
+      
+      <!-- Action buttons -->
+      <div class="action-buttons">
+        <button class="action-button" id="createBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          <span>Create</span>
+        </button>
+        <button class="action-button" id="uploadBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+          <span>Upload</span>
+        </button>
+        <button class="action-button" id="editBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+          <span>Edit</span>
+        </button>
+        <button class="action-button" id="deleteBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+          <span>Delete</span>
+        </button>
+      </div>
+      
+      <!-- Utilities -->
+      <div class="utility-buttons">
+        <div class="dropdown" id="sortDropdown">
+          <button class="sort-button" id="sortBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5h10"></path><path d="M11 9h7"></path><path d="M11 13h4"></path><path d="M3 17h18"></path><path d="M11 21h7"></path><path d="M3 9l4-4 4 4"></path><path d="M7 21V9"></path></svg>
+            <span>Sort by</span>
+          </button>
+          <div class="dropdown-content" id="sortOptions">
+            <a href="#" data-sort="name">Assignment Name</a>
+            <a href="#" data-sort="created">Date Created</a>
+            <a href="#" data-sort="deadline">Due Date</a>
+            <a href="#" data-sort="type">Assignment Type</a>
+            <a href="#" data-sort="pending">Pending Grading</a>
+          </div>
+        </div>
+        <button class="roster-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <span>View Roster</span>
+        </button>
+        <button class="archive-button" id="archiveBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+          <span>Archive</span>
+        </button>
+      </div>
     </div>
-    <div class="frame-4">
-      <div class="text-wrapper-12">Edit</div>
-      <img class="edit-icon" src="https://c.animaapp.com/m92bfqd0MOyKRh/img/edit-icon.svg" alt="Edit Icon" />
+    
+    <!-- Empty state message (shown when no assignments) -->
+    <div id="emptyState" class="empty-state">
+      <div class="empty-state-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+      </div>
+      <h3>No Assignments Yet</h3>
+      <p>Create your first assignment by clicking the Create button above.</p>
     </div>
-    <div class="frame-5">
-      <div class="text-wrapper-13">Delete</div>
-      <img class="delete-icon" src="https://c.animaapp.com/m92bfqd0MOyKRh/img/delete-icon.svg" alt="Delete Icon" />
+    
+    <div id="assignmentsContainer" class="assignments-wrapper" style="display: none;">
+      <div class="assignment-header">
+        <div class="header-name">Assignment Name</div>
+        <div class="header-created">Created On</div>
+        <div class="header-deadline">Grade By</div>
+        <div class="header-uploads">Total Uploads</div>
+        <div class="header-pending">Pending Grading</div>
+        <div class="header-type">Type</div>
+        <div class="header-actions">Actions</div>
+      </div>
+      
+      <div id="assignmentList" class="assignment-list-container">
+        <!-- Assignments will be dynamically added here via JavaScript -->
+      </div>
     </div>
-    <div class="GRADE-button"><div class="text-wrapper-14">GRADE</div></div>
-    <div class="GRADE-button-2"><div class="text-wrapper-14">GRADE</div></div>
-    <div class="GRADE-button-3"><div class="text-wrapper-14">GRADE</div></div>
-    <div class="GRADE-button-4"><div class="text-wrapper-14">GRADE</div></div>
-    <div class="GRADE-button-5"><div class="text-wrapper-14">GRADE</div></div>
-    <div class="GRADE-button-6"><div class="text-wrapper-14">GRADE</div></div>
-    <div class="GRADE-button-7"><div class="text-wrapper-14">GRADE</div></div>
-    <button class="FILTER-button">
-      <div class="text-wrapper-15">Filter</div>
-      <img class="filter-icon" src="https://c.animaapp.com/m92bfqd0MOyKRh/img/filter-icon.svg" alt="Filter Icon" />
-    </button>
-    <div class="SORT-BY-button">
-      <div class="text-wrapper-16">Sort by</div>
-      <img class="sort-by-icon" src="https://c.animaapp.com/m92bfqd0MOyKRh/img/sort-by-icon.svg" alt="Sort By Icon" />
+    
+    <div id="previewPanel" class="preview-panel">
+      <div class="preview-content">
+        <div class="preview-header">
+          <h3>Assignment Preview</h3>
+          <button id="closePreview" class="close-preview">×</button>
+        </div>
+        <div class="preview-body">
+          <div class="preview-eye">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            <span>Preview</span>
+          </div>
+          <div id="pdfPreviewContainer" class="pdf-preview-container">
+            <!-- PDF will be embedded here when available -->
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="SORT-BY-button-2"><div class="text-wrapper-17">View roster</div></div>
+    
+    <div id="createModal" class="create-modal">
+      <div class="modal-content">
+        <h2>Create Assignment</h2>
+        
+        <div class="form-group">
+          <label>Assignment Name:</label>
+          <input id="assignmentName" type="text" placeholder="Enter assignment name...">
+        </div>
+        
+        <div class="form-group">
+          <label>Assignment Type:</label>
+          <div class="checkbox-group">
+            <div class="checkbox-item">
+              <input type="checkbox" id="typeTest" value="test">
+              <label for="typeTest">Test</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="typeHomework" value="homework">
+              <label for="typeHomework">Homework</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="typeMidterm" value="midterm">
+              <label for="typeMidterm">Midterm</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="typeFinal" value="final">
+              <label for="typeFinal">Final</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="typeClassAssignment" value="class-assignment">
+              <label for="typeClassAssignment">Class Assignment</label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>Created On:</label>
+          <input id="createdOnDate" type="date" readonly>
+        </div>
+
+        <div class="form-group">
+          <label>Deadline (Optional):</label>
+          <input id="deadlineDate" type="date">
+        </div>
+        
+        <div class="modal-buttons">
+          <button class="modal-cancel" id="cancelCreateBtn">
+            Cancel
+          </button>
+          <button class="modal-create" id="confirmCreateBtn">
+            Create
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="editModal" class="create-modal">
+      <div class="modal-content">
+        <h2>Edit Assignment</h2>
+        
+        <div class="form-group">
+          <label>Assignment Name:</label>
+          <input id="editAssignmentName" type="text" placeholder="Enter assignment name...">
+        </div>
+        
+        <div class="form-group">
+          <label>Assignment Type:</label>
+          <div class="checkbox-group">
+            <div class="checkbox-item">
+              <input type="checkbox" id="editTypeTest" value="test">
+              <label for="editTypeTest">Test</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="editTypeHomework" value="homework">
+              <label for="editTypeHomework">Homework</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="editTypeMidterm" value="midterm">
+              <label for="editTypeMidterm">Midterm</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="editTypeFinal" value="final">
+              <label for="editTypeFinal">Final</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="editTypeClassAssignment" value="class-assignment">
+              <label for="editTypeClassAssignment">Class Assignment</label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>Created On:</label>
+          <input id="editCreatedOnDate" type="date" readonly>
+        </div>
+
+        <div class="form-group">
+          <label>Deadline (Optional):</label>
+          <input id="editDeadlineDate" type="date">
+        </div>
+        
+        <div class="form-group">
+          <label>Additional Options:</label>
+          <div class="checkbox-group">
+            <div class="checkbox-item">
+              <input type="checkbox" id="uploadPDF">
+              <label for="uploadPDF">Upload PDF</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="previewPDF">
+              <label for="previewPDF">Preview PDF</label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal-buttons">
+          <button class="modal-cancel" id="cancelEditBtn">
+            Cancel
+          </button>
+          <button class="modal-create" id="confirmEditBtn">
+            Save Changes
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="settingsModal" class="settings-modal">
+      <div class="modal-content">
+        <h2>Course Settings</h2>
+        
+        <div class="form-group">
+          <label>Course Abbreviation:</label>
+          <input id="courseAbbreviation" type="text" placeholder="E.g., CS">
+        </div>
+        
+        <div class="form-group">
+          <label>Course Number:</label>
+          <input id="courseNumber" type="text" placeholder="E.g., 101">
+        </div>
+        
+        <div class="form-group">
+          <label>Course Full Name:</label>
+          <input id="courseFullName" type="text" placeholder="E.g., Introduction to Computer Science">
+        </div>
+        
+        <div class="form-group">
+          <label>Section Number:</label>
+          <input id="courseSectionNumber" type="text" placeholder="E.g., 001">
+        </div>
+        
+        <div class="form-group">
+          <label>Semester:</label>
+          <select id="courseSemester">
+            <option value="Fall">Fall</option>
+            <option value="Spring">Spring</option>
+            <option value="Summer">Summer</option>
+            <option value="Winter">Winter</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label>Year:</label>
+          <input id="courseYear" type="number" min="2000" max="2100">
+        </div>
+        
+        <div class="form-group settings-toggle">
+          <label>
+            <input type="checkbox" id="disablePreviews">
+            Disable preview mode for all assignments
+          </label>
+        </div>
+        
+        <div class="modal-buttons">
+          <button class="modal-cancel" id="cancelSettingsBtn">
+            Cancel
+          </button>
+          <button class="modal-create" id="saveSettingsBtn">
+            Save Settings
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="uploadModal" class="upload-modal">
+      <div class="modal-content">
+        <h2>Upload Files for <span id="uploadAssignmentName"></span></h2>
+        
+        <div class="upload-tabs">
+          <button class="upload-tab-btn active" data-tab="student-uploads">Student Submissions</button>
+          <button class="upload-tab-btn" data-tab="preview-upload" id="previewTabBtn">Assignment Preview</button>
+        </div>
+        
+        <div class="upload-tab-content active" id="student-uploads">
+          <div class="form-group">
+            <label>Upload Student Submissions (PDF):</label>
+            <p class="help-text">These files will be available for grading in the Grade view.</p>
+            <div class="file-upload-area">
+              <input type="file" id="studentFilesInput" multiple accept=".pdf">
+              <div class="upload-dropzone" id="studentDropzone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                <p>Drag & drop files here or <span class="browse-text">browse</span></p>
+              </div>
+            </div>
+            <div id="studentFilesList" class="files-list"></div>
+          </div>
+        </div>
+        
+        <div class="upload-tab-content" id="preview-upload">
+          <div class="form-group">
+            <label>Upload Assignment Preview (PDF):</label>
+            <p class="help-text">This is optional and for visual reference only. It will be shown in the preview panel.</p>
+            <div class="file-upload-area">
+              <input type="file" id="previewFileInput" accept=".pdf">
+              <div class="upload-dropzone" id="previewDropzone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                <p>Drag & drop PDF here or <span class="browse-text">browse</span></p>
+              </div>
+            </div>
+            <div id="previewFileName" class="preview-file-name"></div>
+          </div>
+        </div>
+        
+        <div class="modal-buttons">
+          <button class="modal-cancel" id="cancelUploadBtn">
+            Cancel
+          </button>
+          <button class="modal-create" id="confirmUploadBtn">
+            Upload Files
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="archiveModal" class="archive-modal">
+      <div class="modal-content">
+        <h2>Archive</h2>
+        
+        <div class="archive-list" id="archiveList">
+          <div class="no-archive-items">No archived assignments found.</div>
+        </div>
+        
+        <div class="modal-buttons">
+          <button class="modal-cancel" id="cancelArchiveBtn">
+            Cancel
+          </button>
+          <button class="modal-restore" id="restoreAssignmentBtn" disabled>
+            Restore
+          </button>
+          <button class="modal-delete-forever" id="deleteForeverBtn" disabled>
+            Delete Forever
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Assignment row template (for JavaScript reference) -->
+    <template id="assignmentRowTemplate">
+      <div class="assignment-row" data-id="">
+        <div class="assignment-name"></div>
+        <div class="assignment-created"></div>
+        <div class="assignment-deadline"></div>
+        <div class="assignment-uploads">0</div>
+        <div class="assignment-pending">0</div>
+        <div class="assignment-type"></div>
+        <div class="assignment-actions">
+          <button class="grade-button">GRADE</button>
+          <button class="rubric-button">RUBRIC</button>
+          <button class="stats-button">STATS</button>
+        </div>
+      </div>
+    </template>
   </div>
 </div>
+
+<!-- Diagnostic script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("Direct diagnostic script loaded");
+    
+    const deleteBtn = document.getElementById('deleteBtn');
+    const editBtn = document.getElementById('editBtn');
+    const uploadBtn = document.getElementById('uploadBtn');
+    
+    console.log("Direct access to buttons:", {
+        deleteBtn: !!deleteBtn,
+        editBtn: !!editBtn,
+        uploadBtn: !!uploadBtn
+    });
+    
+    if (deleteBtn) {
+        console.log("Adding direct handler to delete button");
+        deleteBtn.onclick = function(e) {
+            console.log("Delete button clicked directly");
+            alert("Delete button clicked");
+            this.classList.toggle('direct-clicked');
+        };
+    }
+    
+    if (editBtn) {
+        console.log("Adding direct handler to edit button");
+        editBtn.onclick = function(e) {
+            console.log("Edit button clicked directly");
+            alert("Edit button clicked");
+            this.classList.toggle('direct-clicked');
+        };
+    }
+    
+    if (uploadBtn) {
+        console.log("Adding direct handler to upload button");
+        uploadBtn.onclick = function(e) {
+            console.log("Upload button clicked directly");
+            alert("Upload button clicked");
+            this.classList.toggle('direct-clicked');
+        };
+    }
+});
+</script>
 {% endblock %}
